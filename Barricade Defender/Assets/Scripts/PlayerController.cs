@@ -5,6 +5,10 @@ public class PlayerController : PlayerStats
 {
     public GameObject BulletPrefab;
     public GameObject ShootPosition;
+    public int Damage;
+
+    [SerializeField]
+    private int moveSpeed;
 
     private Rigidbody2D rb;
     private Vector2 shootPosVector;

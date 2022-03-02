@@ -34,7 +34,7 @@ public class TEST_EnemyController : MonoBehaviour
 
         if(Time.time >= attackTimer && isAttacking)
         {
-            target.GetComponent<BarricadeController>().TakeDamage(Damage);
+            target.GetComponent<PlayerStats>().TakeDamage(Damage);
             attackTimer = Time.time + attackDelay;
         }
     }

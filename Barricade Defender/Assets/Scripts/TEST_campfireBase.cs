@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class BarricadeController : PlayerStats
+public class TEST_campfireBase : PlayerStats
 {
     public Slider HpSlider;
-
     private void Start()
     {
         CurrentHp = MaxHp;
@@ -12,17 +14,9 @@ public class BarricadeController : PlayerStats
 
     private void Update()
     {
-        Death();
         UpdateHpSlider();
     }
 
-    private void Death()
-    {
-        if(CurrentHp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
     private void UpdateHpSlider()
     {
         HpSlider.value = CurrentHp;
