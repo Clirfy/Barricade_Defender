@@ -1,20 +1,18 @@
 using System;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : PlayerStats
 {
     public GameObject BulletPrefab;
     public GameObject ShootPosition;
 
     private Rigidbody2D rb;
     private Vector2 shootPosVector;
-
-    [SerializeField]
-    private int moveSpeed;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        CurrentHp = MaxHp;
     }
 
     void Update()
@@ -53,6 +51,7 @@ public class PlayerController : MonoBehaviour
             
 
             var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
+            bullet.GetComponent<BulletController>().Damage = Damage;
             bullet.transform.right = direction;
         }
     }
