@@ -16,7 +16,7 @@ public class PlayerController : PlayerStats
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        CurrentHp = MaxHp;
+        HpCurrent = HpMax;
     }
 
     void Update()

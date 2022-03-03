@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int MaxHp;
-    public int CurrentHp;
+    public int HpMax;
+    public int HpCurrent;
 
     public int TakeDamage(int damage)
     {
-        return CurrentHp -= damage;
+        return HpCurrent -= damage;
     }
 
 }

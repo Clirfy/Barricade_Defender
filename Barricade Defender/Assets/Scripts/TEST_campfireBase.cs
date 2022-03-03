@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class TEST_campfireBase : PlayerStats
 {
     public Slider HpSlider;
+    public Text HpText;
+
     private void Start()
     {
-        CurrentHp = MaxHp;
-        HpSlider.maxValue = MaxHp;
+        HpCurrent = HpMax;
+        HpSlider.maxValue = HpMax;
     }
 
     private void Update()
@@ -19,6 +21,7 @@ public class TEST_campfireBase : PlayerStats
 
     private void UpdateHpSlider()
     {
-        HpSlider.value = CurrentHp;
+        HpSlider.value = HpCurrent;
+        HpText.text = HpCurrent + " / " + HpMax;
     }
 }

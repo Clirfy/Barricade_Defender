@@ -6,8 +6,8 @@ public class BarricadeController : PlayerStats
 
     private void Start()
     {
-        CurrentHp = MaxHp;
-        HpSlider.maxValue = MaxHp;
+        HpCurrent = HpMax;
+        HpSlider.maxValue = HpMax;
     }
 
     private void Update()
@@ -18,13 +18,13 @@ public class BarricadeController : PlayerStats
 
     private void Death()
     {
-        if(CurrentHp <= 0)
+        if(HpCurrent <= 0)
         {
             Destroy(gameObject);
         }
     }
     private void UpdateHpSlider()
     {
-        HpSlider.value = CurrentHp;
+        HpSlider.value = HpCurrent;
     }
 }

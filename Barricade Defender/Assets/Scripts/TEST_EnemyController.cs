@@ -32,7 +32,7 @@ public class TEST_EnemyController : MonoBehaviour
         UpdateHpSlider();
         Death();
 
-        if(Time.time >= attackTimer && isAttacking)
+        if (Time.time >= attackTimer && isAttacking)
         {
             target.GetComponent<PlayerStats>().TakeDamage(Damage);
             attackTimer = Time.time + attackDelay;
@@ -70,13 +70,12 @@ public class TEST_EnemyController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         isMoving = false;
-        
+
         if (collision.gameObject.CompareTag("CampfireBase"))
         {
-            isMoving = false;
             target = collision.gameObject;
             isAttacking = true;
         }
