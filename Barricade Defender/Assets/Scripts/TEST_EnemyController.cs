@@ -18,9 +18,12 @@ public class TEST_EnemyController : MonoBehaviour
     private float attackTimer;
     private GameObject target;
 
+    private Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         HpSlider.maxValue = Hp;
         attackTimer = Time.time;
@@ -54,7 +57,11 @@ public class TEST_EnemyController : MonoBehaviour
     {
         if (Hp <= 0)
         {
-            Destroy(gameObject);
+            isMoving = false;
+            Destroy(gameObject, 1f);
+            animator.SetBool("IsDying", true);
+            var collider = GetComponent<CapsuleCollider2D>();
+            collider.enabled = false;
         }
     }
 
@@ -78,6 +85,7 @@ public class TEST_EnemyController : MonoBehaviour
         {
             target = collision.gameObject;
             isAttacking = true;
+            animator.SetBool("IsAttacking", true);
         }
     }
 
@@ -86,5 +94,7 @@ public class TEST_EnemyController : MonoBehaviour
         isMoving = true;
         target = null;
         isAttacking = false;
+
+        animator.SetBool("IsAttacking", false);
     }
 }
