@@ -121,10 +121,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1221133390624060868}
   - component: {fileID: 1221133390624060871}
+  - component: {fileID: 1373621842725909326}
   - component: {fileID: 1221133390624060870}
   - component: {fileID: 1221133390624060865}
-  - component: {fileID: 1221133390624060864}
-  - component: {fileID: 1373621842725909326}
+  - component: {fileID: 5807547942672670592}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -198,6 +198,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1373621842725909326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221133390624060867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19cb323a22a20f24286a4521214daedb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &1221133390624060870
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -235,7 +254,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1221133390624060864
+--- !u!114 &5807547942672670592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,29 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 20
-  Damage: 5
+  Damage: 3
   MoveSpeed: 2
   HpSlider: {fileID: 797487680260873310}
-  attackDelay: 0.8
---- !u!95 &1373621842725909326
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221133390624060867}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19cb323a22a20f24286a4521214daedb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  attackDelay: 0.525
 --- !u!1 &4733312463267580774
 GameObject:
   m_ObjectHideFlags: 0
