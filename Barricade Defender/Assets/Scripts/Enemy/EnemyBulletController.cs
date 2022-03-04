@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class EnemyBulletController : MonoBehaviour
 {
     public int BulletSpeed;
     public int Damage;
     public string TargetTag;
-
 
     private void Start()
     {
@@ -14,7 +13,7 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * BulletSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * BulletSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +22,7 @@ public class BulletController : MonoBehaviour
         {
             Debug.Log(collision.name + " hit for " + Damage + " damage");
 
-            collision.GetComponent<Enemy>().TakeDamage(Damage);
+            collision.GetComponent<PlayerStats>().TakeDamage(Damage);
             Destroy(gameObject);
         }
     }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4136634491239737252}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1301929508625690652}
   - component: {fileID: 5169982114738967136}
   - component: {fileID: 7864423565825600888}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6181058447655793809}
   - component: {fileID: 8775962259762859740}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HpSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 3563086288801037649}
   - component: {fileID: 47768359101669721}
   - component: {fileID: 8040115330910106781}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 6437848671895557774}
   - component: {fileID: 8073175600398053524}
   - component: {fileID: 6541997378106268255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barricade
   m_TagString: CampfireBase
   m_Icon: {fileID: 0}
@@ -446,8 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0782d56fb07e854ba11608640e4e162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 50
-  CurrentHp: 0
+  HpMax: 30
+  HpCurrent: 0
   HpSlider: {fileID: 8775962259762859740}
 --- !u!1 &8108518266615304837
 GameObject:
@@ -458,7 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6154980972179001453}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 1429401124014390455}
   - component: {fileID: 8340973270149918108}
   - component: {fileID: 1234549872507344966}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

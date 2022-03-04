@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7409460668728311096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootPosition
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7409460670217137262}
   - component: {fileID: 7409460670217137257}
   - component: {fileID: -7899238330901425602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358a7997a93f8ba4dbf0017a3b6f9406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 30
-  CurrentHp: 0
+  HpMax: 0
+  HpCurrent: 0
   BulletPrefab: {fileID: 8586662549713262621, guid: 27cc44d64b2fc284193f44db9a1f03f0, type: 3}
   ShootPosition: {fileID: 7409460668728311099}
   Damage: 5

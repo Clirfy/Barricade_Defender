@@ -55,6 +55,7 @@ public class PlayerController : PlayerStats
             
 
             var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
+            bullet.GetComponent<BulletController>().TargetTag = "Enemy";
             bullet.GetComponent<BulletController>().Damage = Damage;
             bullet.transform.right = direction;
         }

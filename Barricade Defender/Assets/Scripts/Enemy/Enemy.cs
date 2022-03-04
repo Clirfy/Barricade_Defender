@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     protected float attackTimer;
     protected Rigidbody2D rb;
 
-    private void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -67,6 +67,7 @@ public class Enemy : MonoBehaviour
         if (Hp <= 0)
         {
             isMoving = false;
+            isAttacking = false;
             Destroy(gameObject, 1f);
             animator.SetBool("IsDying", true);
             var collider = GetComponent<CapsuleCollider2D>();

@@ -3,6 +3,14 @@ using UnityEngine.UI;
 
 public class EnemyMelee : Enemy
 {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (target == null)
+        {
+            attackTimer = Time.time + attackDelay;
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         isMoving = false;
@@ -12,14 +20,6 @@ public class EnemyMelee : Enemy
             target = collision.gameObject;
             isAttacking = true;
             animator.SetBool("IsAttacking", true);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (target == null)
-        {
-            attackTimer = Time.time + attackDelay;
         }
     }
 
