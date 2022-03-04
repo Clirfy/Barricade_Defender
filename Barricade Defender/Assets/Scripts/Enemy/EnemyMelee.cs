@@ -1,34 +1,15 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyMelee : Enemy
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void Update()
     {
-        if (target == null)
+        base.Update();
+
+        if (Time.time >= attackTimer && isAttacking)
         {
             attackTimer = Time.time + attackDelay;
+            target.GetComponent<PlayerStats>().TakeDamage(Damage);
         }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        isMoving = false;
-
-        if (collision.gameObject.CompareTag("CampfireBase"))
-        {
-            target = collision.gameObject;
-            isAttacking = true;
-            animator.SetBool("IsAttacking", true);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isMoving = true;
-        target = null;
-        isAttacking = false;
-
-        animator.SetBool("IsAttacking", false);
     }
 }

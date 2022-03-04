@@ -16,11 +16,14 @@ public class Enemy : MonoBehaviour
     protected float attackDelay;
     protected float attackTimer;
     protected Rigidbody2D rb;
+    protected DrawAttackArea DrawAttackArea;
+    protected bool isWaitingToAttack = true;
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        DrawAttackArea = GetComponent<DrawAttackArea>();
 
         HpSlider.maxValue = Hp;
         attackTimer = Time.time;
@@ -28,15 +31,15 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (Hp <= 0)
+        {
+            Death();
+            return;
+        }
+
         Movement();
         UpdateHpSlider();
-        Death();
-
-        if (Time.time >= attackTimer && isAttacking)
-        {
-            target.GetComponent<PlayerStats>().TakeDamage(Damage);
-            attackTimer = Time.time + attackDelay;
-        }
+        Attack();
     }
 
     public int TakeDamage(int damage)
@@ -64,14 +67,38 @@ public class Enemy : MonoBehaviour
 
     protected void Death()
     {
-        if (Hp <= 0)
-        {
             isMoving = false;
             isAttacking = false;
             Destroy(gameObject, 1f);
             animator.SetBool("IsDying", true);
             var collider = GetComponent<CapsuleCollider2D>();
             collider.enabled = false;
+    }
+
+    private void Attack()
+    {
+        if (DrawAttackArea.TargetInRange() != null)
+        {
+            if (isWaitingToAttack)
+            {
+                attackTimer = Time.time + attackDelay;
+                isWaitingToAttack = false;
+            }
+
+            target = DrawAttackArea.TargetInRange().gameObject;
+            isMoving = false;
+            isAttacking = true;
+            animator.SetBool("IsAttacking", true);
+        }
+
+        else
+        {
+            isMoving = true;
+            target = null;
+            isAttacking = false;
+            animator.SetBool("IsAttacking", false);
+            isWaitingToAttack = true;
         }
     }
+
 }

@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DrawRangedArea : MonoBehaviour
+public class DrawAttackArea : MonoBehaviour
 {
     public bool isGizmoEnabled;
     public LayerMask Layer;
     public float AttackRangeOffsetX;
     public Vector2 AttackRange;
+    [HideInInspector]
     public Collider2D[] TargetCollider;
 
     public Collider2D TargetInRange()

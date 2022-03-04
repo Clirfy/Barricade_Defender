@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 1221133390624060870}
   - component: {fileID: 1221133390624060865}
   - component: {fileID: 5807547942672670592}
+  - component: {fileID: 120977441420907578}
   m_Layer: 6
   m_Name: EnemyMelee
   m_TagString: Enemy
@@ -271,6 +272,25 @@ MonoBehaviour:
   MoveSpeed: 2
   HpSlider: {fileID: 797487680260873310}
   attackDelay: 0.525
+--- !u!114 &120977441420907578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221133390624060867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77342b2aaf5d7244fa4a2dcbc3a9045c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGizmoEnabled: 1
+  Layer:
+    serializedVersion: 2
+    m_Bits: 256
+  AttackRangeOffsetX: 0
+  AttackRange: {x: 2, y: 1}
+  TargetCollider: []
 --- !u!1 &4733312463267580774
 GameObject:
   m_ObjectHideFlags: 0
