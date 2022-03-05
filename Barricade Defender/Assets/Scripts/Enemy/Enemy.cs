@@ -31,14 +31,15 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
+        Movement();
+        UpdateHpSlider();
+
         if (Hp <= 0)
         {
             Death();
             return;
         }
 
-        Movement();
-        UpdateHpSlider();
         Attack();
     }
 
