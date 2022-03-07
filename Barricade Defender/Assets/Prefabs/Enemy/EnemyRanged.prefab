@@ -190,7 +190,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1866223138761978688, guid: ea769a6f35390d84db02dd9928f25540, type: 3}
-  m_Color: {r: 1, g: 0.0141509175, b: 0.062385857, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   Damage: 10
   MoveSpeed: 1
   HpSlider: {fileID: 797487680260873310}
+  deathAnim: {fileID: 3313617306187085882, guid: 0359d53149151ea479b770edf5c0ce4a, type: 3}
   attackDelay: 1
   BulletPrefab: {fileID: 8586662549713262621, guid: d72a6a67441d3e84b95e33e5d77ce519, type: 3}
   ShootPosition: {fileID: 6084927637148388942}

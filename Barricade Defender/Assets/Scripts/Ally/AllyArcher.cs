@@ -27,7 +27,10 @@ public class AllyArcher : MonoBehaviour
 
     private void Update()
     {
-        Attack();
+        if (target == null)
+        {
+            Attack();
+        }
 
         if (Time.time >= attackTimer && isAttacking)
         {
@@ -61,5 +64,4 @@ public class AllyArcher : MonoBehaviour
             isWaitingToAttack = true;
         }
     }
-
 }

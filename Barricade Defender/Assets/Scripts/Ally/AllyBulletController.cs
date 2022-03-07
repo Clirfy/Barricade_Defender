@@ -22,6 +22,7 @@ public class AllyBulletController : MonoBehaviour
 		if (TargetPos != null)
 		{
 			UpdateArrowPos();
+			TargetHit();
 		}
 
 		else
@@ -46,6 +47,22 @@ public class AllyBulletController : MonoBehaviour
 		transform.position = nextPos;
 	}
 
+
+	//private void OnTriggerEnter2D(Collider2D collision)
+	//{
+	//	if (collision.CompareTag("Enemy"))
+	//	{
+	//	}
+	//}
+
+	private void TargetHit()
+	{
+		if (Vector2.Distance(transform.position, TargetPos.transform.position) <= .2f)
+		{
+			TargetPos.GetComponent<Enemy>().TakeDamage(Damage);
+			Destroy(gameObject);
+		}
+	}
 	// This is a 2D version of Quaternion.LookAt; it returns a quaternion
 	// that makes the local +X axis point in the given forward direction.
 	// 
@@ -54,14 +71,5 @@ public class AllyBulletController : MonoBehaviour
 	static Quaternion LookAt2D(Vector2 forward)
 	{
 		return Quaternion.Euler(0, 0, Mathf.Atan2(forward.y, forward.x) * Mathf.Rad2Deg);
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.CompareTag("Enemy"))
-		{
-			collision.GetComponent<Enemy>().TakeDamage(Damage);
-			Destroy(gameObject);
-		}
 	}
 }

@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int Damage;
     public int MoveSpeed;
     public Slider HpSlider;
+    public GameObject deathAnim;
 
     protected bool isMoving = true;
     protected bool isAttacking = false;
@@ -36,7 +37,7 @@ public class Enemy : MonoBehaviour
 
         if (Hp <= 0)
         {
-            Death();
+            DeathTest();
             return;
         }
 
@@ -74,6 +75,13 @@ public class Enemy : MonoBehaviour
             animator.SetBool("IsDying", true);
             var collider = GetComponent<CapsuleCollider2D>();
             collider.enabled = false;
+    }
+
+    protected void DeathTest()
+    {
+        var death = Instantiate(deathAnim, transform.position, Quaternion.identity);
+        death.GetComponent<Animator>().SetBool("IsDying", true);
+        Destroy(gameObject);
     }
 
     private void Attack()
