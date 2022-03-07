@@ -21,6 +21,7 @@ public class Ally : MonoBehaviour
         DrawAttackArea = GetComponent<DrawAttackArea>();
 
         attackTimer = Time.time;
+        animator.SetBool("isAttacking", false);
     }
 
     protected virtual void Update()
@@ -43,14 +44,14 @@ public class Ally : MonoBehaviour
 
             target = DrawAttackArea.TargetInRange().gameObject;
             isAttacking = true;
-            animator.SetBool("isShooting", true);
+            animator.SetBool("isAttacking", true);
         }
 
         else
         {
             target = null;
             isAttacking = false;
-            animator.SetBool("isShooting", false);
+            animator.SetBool("isAttacking", false);
             isWaitingToAttack = true;
         }
     }

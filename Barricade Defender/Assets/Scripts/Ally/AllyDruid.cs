@@ -16,6 +16,7 @@ public class AllyDruid : Ally
         {
             if (misslesFired < MisslesCount)
             {
+                animator.SetBool("isAttacking", true);
                 if (misslesAttackRateCounter <= Time.time)
                 {
                     var bullet = Instantiate(ArrowPrefab, ShootPosition.transform.position, Quaternion.identity);
@@ -29,8 +30,32 @@ public class AllyDruid : Ally
             else
             {
                 attackTimer = Time.time + attackDelay;
-                misslesFired = 0;
+                misslesFired = 0; 
+                animator.SetBool("isAttacking", false);
             }
+        }
+    }
+    protected override void Attack()
+    {
+        if (DrawAttackArea.TargetInRange() != null)
+        {
+            if (isWaitingToAttack)
+            {
+                attackTimer = Time.time + attackDelay;
+                isWaitingToAttack = false;
+            }
+
+            target = DrawAttackArea.TargetInRange().gameObject;
+            isAttacking = true;
+            
+        }
+
+        else
+        {
+            target = null;
+            isAttacking = false;
+            
+            isWaitingToAttack = true;
         }
     }
 }
