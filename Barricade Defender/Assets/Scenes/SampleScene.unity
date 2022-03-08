@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ally Druid
       objectReference: {fileID: 0}
+    - target: {fileID: 3042152626385609029, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3042152626385609034, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -353,6 +357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ally Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 3346990105117157494, guid: d6e535af8d0c6e74caef3b2bdfa44798, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3346990105117157499, guid: d6e535af8d0c6e74caef3b2bdfa44798, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -399,6 +407,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e535af8d0c6e74caef3b2bdfa44798, type: 3}
+--- !u!1 &620853303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7409460670217137259, guid: 85188d24454677d4f94630674805ceb3, type: 3}
+  m_PrefabInstance: {fileID: 7409460668641530090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &620853309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620853303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563f88e77b9ba72439c18faaf2f91f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetCount: 1
+  isGizmoEnabled: 1
+  Layer:
+    serializedVersion: 2
+    m_Bits: 64
+  AttackRangeOffsetX: 5.07
+  AttackRange: {x: 10, y: 15}
 --- !u!1 &691816308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,11 +1230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7409460670217137260, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.55
+      value: -9.48
       objectReference: {fileID: 0}
     - target: {fileID: 7409460670217137260, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.26
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 7409460670217137260, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: m_LocalPosition.z
