@@ -4,6 +4,8 @@ public class AllyDruid : Ally
 {
     public int MisslesCount;
     public float MisslesAttackRate;
+    public GameObject SkillPrefab;
+    public int SkillTargetCount;
 
     private int misslesFired;
     private float misslesAttackRateCounter;
@@ -11,6 +13,11 @@ public class AllyDruid : Ally
     protected override void Update()
     {
         base.Update();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Skill();
+        }
 
         if (Time.time >= attackTimer && isAttacking)
         {
@@ -34,6 +41,17 @@ public class AllyDruid : Ally
                 misslesFired = 0; 
                 animator.SetBool("isAttacking", false);
             }
+        }
+    }
+
+    private void Skill()
+    {
+        //can do complete random targets every time if taken all targets found in range and then get x random items
+        Collider2D[] targets = ReturnTargetsInRange.GetTargets(SkillTargetCount);
+
+        foreach (var item in targets)
+        {
+            Instantiate(SkillPrefab, item.gameObject.transform.position, Quaternion.identity);
         }
     }
 }

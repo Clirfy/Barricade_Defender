@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ReturnTargetsInRange : MonoBehaviour
 {
-    public int TargetCount;
+    //public int TargetCount;
     public bool isGizmoEnabled;
     public LayerMask Layer;
     public float AttackRangeOffsetX;
@@ -12,13 +12,13 @@ public class ReturnTargetsInRange : MonoBehaviour
 
     private List<Collider2D> targetsList;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            GetTargets(TargetCount);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Q))
+    //    {
+    //        GetTargets(TargetCount);
+    //    }
+    //}
 
     public Collider2D[] GetTargets(int count)
     {
