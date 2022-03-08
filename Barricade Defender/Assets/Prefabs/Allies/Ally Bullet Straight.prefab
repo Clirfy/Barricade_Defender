@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 941562817717478772}
   - component: {fileID: 6908299430965232743}
   - component: {fileID: -2869318055398886227}
+  - component: {fileID: 2364609710424970200}
+  - component: {fileID: 4059292334161017824}
   m_Layer: 0
   m_Name: Ally Bullet Straight
   m_TagString: Untagged
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7493328296200180357, guid: 48e86f1294ab691469a7d38c551c9fdb, type: 3}
+  m_Sprite: {fileID: 7838606537102035374, guid: 2040c05571ada2b4eb3f864bae68bdb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,3 +100,37 @@ MonoBehaviour:
   Damage: 0
   TargetPos: {fileID: 0}
   speed: 10
+--- !u!95 &2364609710424970200
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096489511064477162}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &4059292334161017824
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096489511064477162}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
