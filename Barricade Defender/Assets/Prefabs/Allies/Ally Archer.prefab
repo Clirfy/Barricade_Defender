@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3346990105117157494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.89, y: 0.01, z: -5.2615867}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8525924103113236819}
@@ -138,7 +138,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   AttackRangeOffsetX: 8
-  AttackRange: {x: 15, y: 10}
+  AttackRange: {x: 15, y: 15}
   TargetCollider: []
 --- !u!1 &8195282023538563462
 GameObject:

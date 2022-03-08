@@ -32,7 +32,7 @@ public class Ally : MonoBehaviour
         }
     }
 
-    protected virtual void Attack()
+    protected void Attack()
     {
         if (DrawAttackArea.TargetInRange() != null)
         {
@@ -44,14 +44,12 @@ public class Ally : MonoBehaviour
 
             target = DrawAttackArea.TargetInRange().gameObject;
             isAttacking = true;
-            animator.SetBool("isAttacking", true);
         }
 
         else
         {
             target = null;
             isAttacking = false;
-            animator.SetBool("isAttacking", false);
             isWaitingToAttack = true;
         }
     }

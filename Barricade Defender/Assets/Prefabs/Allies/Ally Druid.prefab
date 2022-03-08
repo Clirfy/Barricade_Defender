@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042152626385609029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: -1.29, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2162425860279979939}
@@ -118,10 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  ArrowPrefab: {fileID: 3941904793410830092, guid: 1e922eda23757d44599e2f00db480fbe, type: 3}
+  ArrowPrefab: {fileID: 7096489511064477162, guid: f1f3b887d885a2f4f8d354cac14162ea, type: 3}
   ShootPosition: {fileID: 5425433061383422806}
   attackDelay: 2
-  MisslesCount: 10
+  MisslesCount: 5
   MisslesAttackRate: 0.04
 --- !u!114 &3726574144871671693
 MonoBehaviour:
