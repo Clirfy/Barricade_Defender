@@ -262,12 +262,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: attackDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: MisslesCount
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: MisslesAttackRate
-      value: 0.04
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
