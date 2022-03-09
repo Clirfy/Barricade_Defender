@@ -125,6 +125,7 @@ MonoBehaviour:
   MisslesAttackRate: 0.1
   SkillPrefab: {fileID: 549297221309398136, guid: 8eba2ff36666c8748acec8f652c9b17b, type: 3}
   SkillTargetCount: 3
+  SlowPower: 0.8
 --- !u!114 &3726574144871671693
 MonoBehaviour:
   m_ObjectHideFlags: 0

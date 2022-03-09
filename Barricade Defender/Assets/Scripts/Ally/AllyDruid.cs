@@ -7,6 +7,8 @@ public class AllyDruid : Ally
     public float MisslesAttackRate;
     public GameObject SkillPrefab;
     public int SkillTargetCount;
+    [Range(0f, 1f)]
+    public float SlowPower;
 
     private int misslesFired;
     private float misslesAttackRateCounter;
@@ -39,7 +41,7 @@ public class AllyDruid : Ally
             else
             {
                 attackTimer = Time.time + attackDelay;
-                misslesFired = 0; 
+                misslesFired = 0;
                 animator.SetBool("isAttacking", false);
             }
         }
@@ -47,14 +49,20 @@ public class AllyDruid : Ally
 
     private void Skill()
     {
+        int counter = 0;
         GameObject[] nearestTargets = GameObject.FindGameObjectsWithTag("Enemy")
             .OrderBy(o => Vector2.Distance(o.transform.position, transform.position))
             .ToArray();
 
-        for (int i = 0; i < SkillTargetCount; i++)
+        foreach (var item in nearestTargets)
         {
-            Debug.Log(nearestTargets[i].name);
-            Instantiate(SkillPrefab, nearestTargets[i].transform.position, Quaternion.identity);
+            if (item != null && counter < SkillTargetCount)
+            {
+                Debug.Log(item.name);
+                var skill = Instantiate(SkillPrefab, item.transform.position, Quaternion.identity);
+                skill.GetComponent<AllyDruidSkill>().SlowPower = SlowPower;
+                counter++;
+            }
         }
     }
 }

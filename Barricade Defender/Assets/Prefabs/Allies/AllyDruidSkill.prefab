@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2785136670991327713}
   - component: {fileID: 4165380597880946280}
+  - component: {fileID: 5483937917308557323}
   - component: {fileID: 3602567515403587802}
+  - component: {fileID: -4454840236771588604}
   m_Layer: 0
   m_Name: AllyDruidSkill
   m_TagString: Untagged
@@ -83,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &5483937917308557323
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549297221309398136}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &3602567515403587802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,3 +114,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayTimer: 1
+--- !u!114 &-4454840236771588604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549297221309398136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa463e01b9892c4429d323f4c4200033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SlowPower: 0.8

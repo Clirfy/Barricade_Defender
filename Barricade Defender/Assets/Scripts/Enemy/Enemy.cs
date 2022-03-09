@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public int Hp;
     public int Damage;
-    public int MoveSpeed;
+    public float MoveSpeed;
     public Slider HpSlider;
     public GameObject deathAnim;
 

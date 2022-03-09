@@ -223,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -296,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.47
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.09
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.19
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -979,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.12
+      value: 6.72
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060868, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_LocalPosition.y
