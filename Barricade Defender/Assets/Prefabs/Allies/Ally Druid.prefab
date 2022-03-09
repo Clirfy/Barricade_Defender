@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3042152626385609028}
   - component: {fileID: 6587257368063879767}
   - component: {fileID: 3726574144871671693}
-  - component: {fileID: -8197128007646658321}
   m_Layer: 0
   m_Name: Ally Druid
   m_TagString: Untagged
@@ -145,24 +144,6 @@ MonoBehaviour:
   AttackRangeOffsetX: 5
   AttackRange: {x: 10, y: 15}
   TargetCollider: []
---- !u!114 &-8197128007646658321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3042152626385609029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563f88e77b9ba72439c18faaf2f91f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGizmoEnabled: 1
-  Layer:
-    serializedVersion: 2
-    m_Bits: 64
-  AttackRangeOffsetX: 5
-  AttackRange: {x: 10, y: 15}
 --- !u!1 &5425433061383422806
 GameObject:
   m_ObjectHideFlags: 0

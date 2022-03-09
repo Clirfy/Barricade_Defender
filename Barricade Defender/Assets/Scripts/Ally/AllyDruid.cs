@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class AllyDruid : Ally
@@ -46,12 +47,14 @@ public class AllyDruid : Ally
 
     private void Skill()
     {
-        //can do complete random targets every time if taken all targets found in range and then get x random items
-        Collider2D[] targets = ReturnTargetsInRange.GetTargets(SkillTargetCount);
+        GameObject[] nearestTargets = GameObject.FindGameObjectsWithTag("Enemy")
+            .OrderBy(o => Vector2.Distance(o.transform.position, transform.position))
+            .ToArray();
 
-        foreach (var item in targets)
+        for (int i = 0; i < SkillTargetCount; i++)
         {
-            Instantiate(SkillPrefab, item.gameObject.transform.position, Quaternion.identity);
+            Debug.Log(nearestTargets[i].name);
+            Instantiate(SkillPrefab, nearestTargets[i].transform.position, Quaternion.identity);
         }
     }
 }
