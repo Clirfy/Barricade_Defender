@@ -42,11 +42,28 @@ public class ReturnTargetsInRange : MonoBehaviour
         }
     }
 
+    Collider2D GetClosestEnemy(Collider2D[] enemies)
+    {
+        Collider2D bestTarget = null;
+        float closestDistanceSqr = Mathf.Infinity;
+        Vector3 currentPosition = transform.position;
+        foreach (Collider2D potentialTarget in enemies)
+        {
+            Vector3 directionToTarget = potentialTarget.gameObject.transform.position - currentPosition;
+            float dSqrToTarget = directionToTarget.sqrMagnitude;
+            if (dSqrToTarget < closestDistanceSqr)
+            {
+                closestDistanceSqr = dSqrToTarget;
+                bestTarget = potentialTarget;
+            }
+        }
+        return bestTarget;
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         if (isGizmoEnabled)
             Gizmos.DrawWireCube(new Vector2(gameObject.transform.position.x + AttackRangeOffsetX, gameObject.transform.position.y), AttackRange);
     }
-
 }
