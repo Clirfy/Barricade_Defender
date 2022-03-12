@@ -30,6 +30,11 @@ public class Enemy : MonoBehaviour
         attackTimer = Time.time;
     }
 
+    private void ListenOnEventTest()
+    {
+        Debug.Log("event tested by: " + gameObject.name);
+    }
+
     protected virtual void Update()
     {
         Movement();
@@ -69,12 +74,12 @@ public class Enemy : MonoBehaviour
 
     protected void Death()
     {
-            isMoving = false;
-            isAttacking = false;
-            Destroy(gameObject, 1f);
-            animator.SetBool("IsDying", true);
-            var collider = GetComponent<CapsuleCollider2D>();
-            collider.enabled = false;
+        isMoving = false;
+        isAttacking = false;
+        Destroy(gameObject, 1f);
+        animator.SetBool("IsDying", true);
+        var collider = GetComponent<CapsuleCollider2D>();
+        collider.enabled = false;
     }
 
     protected void DeathTest()

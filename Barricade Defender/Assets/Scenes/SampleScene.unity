@@ -211,7 +211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1221133390624060865, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060867, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Name
@@ -284,7 +284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1221133390624060865, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060867, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Name
@@ -362,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 3042152626385609029, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_Name
       value: Ally Druid
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042152626385609029, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3042152626385609034, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_RootOrder
@@ -719,7 +723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1221133390624060865, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060867, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Name
@@ -797,7 +801,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1221133390624060865, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060867, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Name
@@ -967,7 +971,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1221133390624060865, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1221133390624060867, guid: d4bd96bdecfb16644868cfca754929c0, type: 3}
       propertyPath: m_Name
