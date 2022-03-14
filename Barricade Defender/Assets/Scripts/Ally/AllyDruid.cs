@@ -13,6 +13,8 @@ public class AllyDruid : Ally
 
     private int misslesFired;
     private float misslesAttackRateCounter;
+    [SerializeField]
+    private float skillCastingTimer;
 
     protected override void Update()
     {
@@ -21,7 +23,7 @@ public class AllyDruid : Ally
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Skill();
-            StartCoroutine(CoStopCastingAnim(1f));
+            StartCoroutine(CoStopCastingAnim(skillCastingTimer));
         }
 
         if (Time.time >= attackTimer && isAttacking)
@@ -50,6 +52,7 @@ public class AllyDruid : Ally
         else if (isAttacking == false)
         {
             animator.SetBool("isAttacking", false);
+            misslesFired = 0;
         }
     }
 
