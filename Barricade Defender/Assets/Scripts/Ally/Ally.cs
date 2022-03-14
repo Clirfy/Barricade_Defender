@@ -38,21 +38,14 @@ public class Ally : MonoBehaviour
     {
         if (DrawAttackArea.TargetInRange() != null)
         {
-            if (isWaitingToAttack)
-            {
-                attackTimer = Time.time + attackDelay;
-                isWaitingToAttack = false;
-            }
-
-            target = DrawAttackArea.TargetInRange().gameObject;
             isAttacking = true;
+            target = DrawAttackArea.TargetInRange().gameObject;
         }
 
         else
         {
             target = null;
             isAttacking = false;
-            isWaitingToAttack = true;
         }
     }
 }
