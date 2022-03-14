@@ -9,7 +9,7 @@ public class EnemyMelee : Enemy
         if (Time.time >= attackTimer && isAttacking)
         {
             attackTimer = Time.time + attackDelay;
-            target.GetComponent<PlayerStats>().TakeDamage(Damage);
+            //target.GetComponent<PlayerStats>().TakeDamage(Damage);
         }
     }
 }

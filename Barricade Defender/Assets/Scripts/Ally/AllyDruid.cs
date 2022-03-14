@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class AllyDruid : Ally
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Skill();
+            StartCoroutine(CoStopCastingAnim(1f));
         }
 
         if (Time.time >= attackTimer && isAttacking)
@@ -45,6 +47,10 @@ public class AllyDruid : Ally
                 animator.SetBool("isAttacking", false);
             }
         }
+        else if (isAttacking == false)
+        {
+            animator.SetBool("isAttacking", false);
+        }
     }
 
     private void Skill()
@@ -62,7 +68,15 @@ public class AllyDruid : Ally
                 var skill = Instantiate(SkillPrefab, item.transform.position, Quaternion.identity);
                 skill.GetComponent<AllyDruidSkill>().SlowPower = SlowPower;
                 counter++;
+
+                animator.SetBool("isCasting", true);
             }
         }
+    }
+
+    private IEnumerator CoStopCastingAnim(float time)
+    {
+        yield return new WaitForSeconds(time);
+        animator.SetBool("isCasting", false);
     }
 }

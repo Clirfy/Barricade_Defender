@@ -30,11 +30,6 @@ public class Enemy : MonoBehaviour
         attackTimer = Time.time;
     }
 
-    private void ListenOnEventTest()
-    {
-        Debug.Log("event tested by: " + gameObject.name);
-    }
-
     protected virtual void Update()
     {
         Movement();
