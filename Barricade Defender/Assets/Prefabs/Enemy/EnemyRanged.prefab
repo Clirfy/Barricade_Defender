@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 1221133390624060865}
   - component: {fileID: 645154506147437997}
   - component: {fileID: 4177968576837537550}
+  - component: {fileID: -3251487289238321635}
   m_Layer: 6
   m_Name: EnemyRanged
   m_TagString: Enemy
@@ -295,6 +296,18 @@ MonoBehaviour:
   AttackRangeOffsetX: -2.5
   AttackRange: {x: 5, y: 0.5}
   TargetCollider: []
+--- !u!114 &-3251487289238321635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221133390624060867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0371ddc02efd5ed468778afa627952ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4733312463267580774
 GameObject:
   m_ObjectHideFlags: 0
