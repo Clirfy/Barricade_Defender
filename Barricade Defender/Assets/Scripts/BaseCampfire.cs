@@ -25,7 +25,7 @@ public class BaseCampfire : MonoBehaviour
 
     public void TakeMoney(int ammount)
     {
-        if (ammount < Money)
+        if (ammount <= Money)
         {
             Money -= ammount;
             OnMoneyChanged.Invoke();
