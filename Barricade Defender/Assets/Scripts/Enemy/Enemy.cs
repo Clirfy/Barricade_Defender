@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
@@ -8,6 +9,10 @@ public class Enemy : MonoBehaviour
     public float MoveSpeed;
     public Slider HpSlider;
     public GameObject deathAnim;
+    public int MoneyReward;
+    [HideInInspector]
+    public UnityEvent OnEnemyDeath;
+
 
     protected bool isMoving = true;
     protected bool isAttacking = false;
@@ -81,6 +86,8 @@ public class Enemy : MonoBehaviour
     {
         var death = Instantiate(deathAnim, transform.position, Quaternion.identity);
         death.GetComponent<Animator>().SetBool("IsDying", true);
+
+        OnEnemyDeath.Invoke();
         Destroy(gameObject);
     }
 
