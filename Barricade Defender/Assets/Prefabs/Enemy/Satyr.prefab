@@ -273,6 +273,7 @@ MonoBehaviour:
   MoveSpeed: 1.5
   HpSlider: {fileID: 797487680260873310}
   deathAnim: {fileID: 3313617306187085882, guid: e5abfbd8c55f293469ae2e8b07ef3cf0, type: 3}
+  MoneyReward: 10
   attackDelay: 0.525
 --- !u!114 &120977441420907578
 MonoBehaviour:

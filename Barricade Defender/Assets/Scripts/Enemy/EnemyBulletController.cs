@@ -22,7 +22,7 @@ public class EnemyBulletController : MonoBehaviour
         {
             Debug.Log(collision.name + " hit for " + Damage + " damage");
 
-            collision.GetComponent<PlayerStats>().TakeDamage(Damage);
+            collision.GetComponent<BaseCampfire>().TakeDamage(Damage);
             Destroy(gameObject);
         }
     }
