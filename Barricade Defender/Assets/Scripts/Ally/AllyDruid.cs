@@ -68,7 +68,7 @@ public class AllyDruid : Ally
             if (item != null && counter < SkillTargetCount)
             {
                 Debug.Log(item.name);
-                var skill = Instantiate(SkillPrefab, item.transform.position, Quaternion.identity);
+                var skill = Instantiate(SkillPrefab, new Vector2(item.transform.position.x - 0.5f, item.transform.position.y), Quaternion.identity);
                 skill.GetComponent<AllyDruidSkill>().SlowPower = SlowPower;
                 counter++;
 

@@ -230,6 +230,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: SlowPower
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: skillCastingTimer
       value: 1.5
       objectReference: {fileID: 0}
