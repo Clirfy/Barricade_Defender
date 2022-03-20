@@ -23,6 +23,18 @@ TextureImporter:
   - first:
       213: -7505464067297615115
     second: satyr_6
+  - first:
+      213: 7932881567269298343
+    second: satyr_7
+  - first:
+      213: -5049279289655282140
+    second: satyr_8
+  - first:
+      213: -9051980837467093701
+    second: satyr_9
+  - first:
+      213: -5807015005872669889
+    second: satyr_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,7 +142,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +163,7 @@ TextureImporter:
         x: 37
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +184,7 @@ TextureImporter:
         x: 74
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +205,7 @@ TextureImporter:
         x: 111
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +226,7 @@ TextureImporter:
         x: 148
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,7 +247,7 @@ TextureImporter:
         x: 185
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,7 +268,7 @@ TextureImporter:
         x: 222
         y: 0
         width: 37
-        height: 34
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,6 +278,90 @@ TextureImporter:
       bones: []
       spriteID: 5f2644a423c37d790800000000000000
       internalID: -7505464067297615115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satyr_7
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0a45651c1471e60800000000000000
+      internalID: 7932881567269298343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satyr_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4263c500d3b5de9b0800000000000000
+      internalID: -5049279289655282140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satyr_9
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3581254367e06280800000000000000
+      internalID: -9051980837467093701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: satyr_10
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bb8997e96596fa0800000000000000
+      internalID: -5807015005872669889
       vertices: []
       indices: 
       edges: []
