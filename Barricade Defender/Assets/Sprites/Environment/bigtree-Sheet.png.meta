@@ -38,6 +38,12 @@ TextureImporter:
   - first:
       213: -8721256647135933990
     second: bigtree-Sheet_11
+  - first:
+      213: 8687560154583871359
+    second: bigtree-Sheet_12
+  - first:
+      213: -9033570072855317502
+    second: bigtree-Sheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -386,6 +392,48 @@ TextureImporter:
       bones: []
       spriteID: ad9c270694fd7f680800000000000000
       internalID: -8721256647135933990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigtree-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 0
+        width: 261
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f2fc29ee9609870800000000000000
+      internalID: 8687560154583871359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigtree-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3393
+        y: 0
+        width: 261
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204fbd171ef42a280800000000000000
+      internalID: -9033570072855317502
       vertices: []
       indices: 
       edges: []
