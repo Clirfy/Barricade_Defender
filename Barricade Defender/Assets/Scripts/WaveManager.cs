@@ -10,6 +10,10 @@ public class WaveManager : MonoBehaviour
 
     public Button StartButton;
 
+    [SerializeField]
+    private Vector2 YposRange;
+    [SerializeField]
+    private float XposSpawn;
     private float enemySpawnCounter;
     private int enemySpawnedAmmount;
 
@@ -43,7 +47,7 @@ public class WaveManager : MonoBehaviour
     private void SpawnEnemy()
     {
         int randomEnemy = Random.Range(0, EnemyPrefab.Length);
-        Vector2 randomPos = new Vector2(10f, Random.Range(-4f, 4f));
+        Vector2 randomPos = new Vector2(XposSpawn, Random.Range(YposRange.x, YposRange.y));
 
         Instantiate(EnemyPrefab[randomEnemy], randomPos, Quaternion.identity);
     }
