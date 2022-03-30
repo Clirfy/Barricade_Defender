@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour
 
         HpSlider.maxValue = Hp;
         attackTimer = Time.time;
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
     protected virtual void Update()

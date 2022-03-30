@@ -58,10 +58,21 @@ public class AllyDruid : Ally
 
     private void Skill()
     {
+        int spellDmg = Damage * 2;
+        int targetDmgDivider;
         int counter = 0;
         GameObject[] nearestTargets = GameObject.FindGameObjectsWithTag("Enemy")
             .OrderBy(o => Vector2.Distance(o.transform.position, transform.position))
             .ToArray();
+
+        targetDmgDivider = nearestTargets.Length;
+
+        if (targetDmgDivider > SkillTargetCount)
+        {
+            targetDmgDivider = SkillTargetCount;
+        }
+
+        spellDmg /= targetDmgDivider;
 
         foreach (var item in nearestTargets)
         {
@@ -70,8 +81,9 @@ public class AllyDruid : Ally
                 Debug.Log(item.name);
                 var skill = Instantiate(SkillPrefab, new Vector2(item.transform.position.x - 0.5f, item.transform.position.y), Quaternion.identity);
                 skill.GetComponent<AllyDruidSkill>().SlowPower = SlowPower;
+                skill.GetComponent<AllyDruidSkill>().Damage = spellDmg;
                 counter++;
-
+                Debug.Log("skill dmg: " + spellDmg);
                 animator.SetBool("isCasting", true);
             }
         }

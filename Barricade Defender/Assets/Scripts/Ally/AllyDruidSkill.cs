@@ -6,8 +6,15 @@ public class AllyDruidSkill : MonoBehaviour
 {
     [HideInInspector]
     public float SlowPower;
+    [HideInInspector]
+    public int Damage;
 
     private List<Collider2D> targets = new List<Collider2D>();
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.GetComponent<Enemy>().TakeDamage(Damage);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
