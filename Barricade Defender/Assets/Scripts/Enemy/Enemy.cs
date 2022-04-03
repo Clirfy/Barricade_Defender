@@ -71,16 +71,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    protected void Death()
-    {
-        isMoving = false;
-        isAttacking = false;
-        Destroy(gameObject, 1f);
-        animator.SetBool("IsDying", true);
-        var collider = GetComponent<CapsuleCollider2D>();
-        collider.enabled = false;
-    }
-
     protected void DeathTest()
     {
         var death = Instantiate(deathAnim, transform.position, Quaternion.identity);
