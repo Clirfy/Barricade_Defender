@@ -121,6 +121,7 @@ MonoBehaviour:
   ArrowPrefab: {fileID: 3941904793410830092, guid: 1e922eda23757d44599e2f00db480fbe, type: 3}
   ShootPosition: {fileID: 8195282023538563462}
   attackDelay: 1
+  firstAttackDelay: 0.66
 --- !u!114 &3346990105117157495
 MonoBehaviour:
   m_ObjectHideFlags: 0
