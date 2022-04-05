@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AllyDruidUpgrades : MonoBehaviour
 {
+    public UnityEvent OnLevel5;
+
     private AllyDruid allyDruid;
     private BaseCampfire baseCampfire;
 
@@ -34,7 +35,9 @@ public class AllyDruidUpgrades : MonoBehaviour
             baseCampfire.TakeMoney(levelUpCost);
             levelUpCost = Mathf.RoundToInt(levelUpCost * 1.5f);
             allyDruid.Damage += 1;
+            allyDruid.Level += 1;
             UpdateTextInfo();
+            EnableTalentTier(allyDruid.Level);
         }
         else
         {
@@ -62,5 +65,18 @@ public class AllyDruidUpgrades : MonoBehaviour
         levelUpText.text = levelUpCost.ToString();
         upgradeSkillText.text = upgradeSkillCost.ToString();
         mainPanelText.text = "Damage: " + allyDruid.Damage + "\nSlow Power: " + (allyDruid.SlowPower * 100) + "%";
+    }
+
+    private void EnableTalentTier(int level)
+    {
+        switch (level)
+        {
+            case 5:
+                OnLevel5.Invoke();
+                break;
+
+            default:
+                break;
+        }
     }
 }

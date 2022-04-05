@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Ally : MonoBehaviour
 {
+    public int Level;
     public int Damage;
     public GameObject ArrowPrefab;
     public GameObject ShootPosition;

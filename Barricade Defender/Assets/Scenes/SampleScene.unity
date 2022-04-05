@@ -463,8 +463,16 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: SkillTargetCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: skillCastingTimer
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672073651916593930, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00000047683716
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
@@ -1227,7 +1235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 83.4, y: 35}
+  m_AnchoredPosition: {x: 83.399994, y: 35}
   m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697708066
@@ -3147,6 +3155,10 @@ PrefabInstance:
     - target: {fileID: 4673952037669863368, guid: b560e50537f85284d9e19b4cabf85d12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673952037669863370, guid: b560e50537f85284d9e19b4cabf85d12, type: 3}
+      propertyPath: Money
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 4673952037669863371, guid: b560e50537f85284d9e19b4cabf85d12, type: 3}
       propertyPath: m_Name

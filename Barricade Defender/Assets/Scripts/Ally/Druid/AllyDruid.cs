@@ -7,6 +7,9 @@ public class AllyDruid : Ally
     public int MisslesCount;
     public float MisslesAttackRate;
     public GameObject SkillPrefab;
+    public int SpellDmg;
+    [HideInInspector]
+    public int SpellDmgModifier;
     public int SkillTargetCount;
     [Range(0f, 1f)]
     public float SlowPower;
@@ -19,6 +22,8 @@ public class AllyDruid : Ally
     protected override void Update()
     {
         base.Update();
+
+        SpellDmg = Damage * SpellDmgModifier;
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -58,7 +63,6 @@ public class AllyDruid : Ally
 
     private void Skill()
     {
-        int spellDmg = Damage * 2;
         int targetDmgDivider;
         int counter = 0;
         GameObject[] nearestTargets = GameObject.FindGameObjectsWithTag("Enemy")
@@ -72,7 +76,7 @@ public class AllyDruid : Ally
             targetDmgDivider = SkillTargetCount;
         }
 
-        spellDmg /= targetDmgDivider;
+        SpellDmg /= targetDmgDivider;
 
         foreach (var item in nearestTargets)
         {
@@ -81,9 +85,9 @@ public class AllyDruid : Ally
                 Debug.Log(item.name);
                 var skill = Instantiate(SkillPrefab, new Vector2(item.transform.position.x - 0.5f, item.transform.position.y), Quaternion.identity);
                 skill.GetComponent<AllyDruidSkill>().SlowPower = SlowPower;
-                skill.GetComponent<AllyDruidSkill>().Damage = spellDmg;
+                skill.GetComponent<AllyDruidSkill>().Damage = SpellDmg;
                 counter++;
-                Debug.Log("skill dmg: " + spellDmg);
+                Debug.Log("skill dmg: " + SpellDmg);
                 animator.SetBool("isCasting", true);
             }
         }
