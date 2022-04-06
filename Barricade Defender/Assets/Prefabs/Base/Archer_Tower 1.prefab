@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8469418490817019322}
   - component: {fileID: 1552010603998905461}
   m_Layer: 0
-  m_Name: Archer_Tower
+  m_Name: Archer_Tower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
