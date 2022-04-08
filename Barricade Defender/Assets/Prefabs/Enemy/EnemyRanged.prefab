@@ -233,9 +233,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2, y: 1}
-  m_Direction: 1
+  m_Offset: {x: 0, y: -0.22}
+  m_Size: {x: 0.8, y: 1.4}
+  m_Direction: 0
 --- !u!50 &1221133390624060865
 Rigidbody2D:
   serializedVersion: 4
@@ -295,7 +295,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   AttackRangeOffsetX: -2.5
-  AttackRange: {x: 5, y: 0.5}
+  AttackRange: {x: 5, y: 1}
   TargetCollider: []
 --- !u!114 &-3251487289238321635
 MonoBehaviour:
