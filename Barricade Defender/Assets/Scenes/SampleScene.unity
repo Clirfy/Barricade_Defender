@@ -1768,6 +1768,7 @@ GameObject:
   - component: {fileID: 910728190}
   - component: {fileID: 910728189}
   - component: {fileID: 910728188}
+  - component: {fileID: 910728192}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1859,6 +1860,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &910728192
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910728187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c96b3225920f70d47b4039f4b9b4056a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &934056478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,6 +3365,14 @@ PrefabInstance:
     - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: HpMax
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409460668728311096, guid: 85188d24454677d4f94630674805ceb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.501
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409460668728311096, guid: 85188d24454677d4f94630674805ceb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.109
       objectReference: {fileID: 0}
     - target: {fileID: 7409460670217137257, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: m_Mass
