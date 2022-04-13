@@ -349,21 +349,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1633414696}
     m_Modifications:
-    - target: {fileID: 2162425860279979939, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.739
-      objectReference: {fileID: 0}
-    - target: {fileID: 2162425860279979939, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.874
-      objectReference: {fileID: 0}
     - target: {fileID: 3042152626385609029, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_Name
       value: Ally Druid
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042152626385609029, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3042152626385609034, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_RootOrder
@@ -408,26 +396,6 @@ PrefabInstance:
     - target: {fileID: 3042152626385609034, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042152626385609035, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: SlowPower
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: SkillTargetCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: skillCastingTimer
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672073651916593930, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00000047683716
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
