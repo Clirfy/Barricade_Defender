@@ -68,6 +68,8 @@ public class PlayerController : PlayerStats
 
         animator.SetFloat("xPos", lastXPos);
         rb.velocity = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed);
+
+        gameObject.transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, -8, 2));
     }
 
     private void Shoot()
