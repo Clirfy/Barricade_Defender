@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : PlayerStats
 {
+    public GameObject MeleeAttackPrefab;
+    public GameObject MeleeAttackLeftPos;
+    public GameObject MeleeAttackRightPos;
     public GameObject BulletPrefab;
     public GameObject ShootPosition;
     public int Damage;
@@ -101,6 +104,22 @@ public class PlayerController : PlayerStats
             animator.SetBool("isAttacking", true);
             animator.SetBool("isAttackingMelee", true);
             StartCoroutine(CoDoAttack(MeleeAttackTime, "isAttackingMelee"));
+
+            switch (lastXPos)
+            {
+                case 1f:
+                    var attackRight = Instantiate(MeleeAttackPrefab, MeleeAttackRightPos.transform.position, Quaternion.identity);
+                    attackRight.GetComponent<PlayerMeleeAttack>().Damage = Damage;
+                    break;
+
+                case -1f:
+                    var attackLeft = Instantiate(MeleeAttackPrefab, MeleeAttackLeftPos.transform.position, Quaternion.identity);
+                    attackLeft.GetComponent<PlayerMeleeAttack>().Damage = Damage;
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 

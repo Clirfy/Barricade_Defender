@@ -290,7 +290,7 @@ MonoBehaviour:
   isGizmoEnabled: 1
   Layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 384
   AttackRangeOffsetX: 0
   AttackRange: {x: 2, y: 1}
   TargetCollider: []
