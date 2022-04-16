@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager : SingletonMonoBehaviour<GameManager>
+public class GameManager : MonoBehaviour
 {
+    [HideInInspector]
     public UnityEvent OnGamePaused;
-    private GameObject Player;
-    private SceneLoader sceneLoader;
 
-    protected override void Awake()
+    private void Awake()
     {
         DontDestroy();
     }
@@ -33,9 +32,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Time.timeScale = 0f;
-            Player.GetComponent<PlayerController>().enabled = false;
             OnGamePaused.Invoke();
         }
+    }
+
+    public void ClickResumeGame()
+    {
+        OnGamePaused.Invoke();
     }
 }
