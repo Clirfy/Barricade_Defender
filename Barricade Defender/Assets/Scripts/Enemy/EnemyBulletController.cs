@@ -4,7 +4,7 @@ public class EnemyBulletController : MonoBehaviour
 {
     public int BulletSpeed;
     public int Damage;
-    public string TargetTag;
+    //public string TargetTag;
 
     private void Start()
     {
@@ -18,11 +18,19 @@ public class EnemyBulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(TargetTag))
+        if (collision.CompareTag("CampfireBase"))
         {
             Debug.Log(collision.name + " hit for " + Damage + " damage");
 
             collision.GetComponent<BaseCampfire>().TakeDamage(Damage);
+            Destroy(gameObject);
+        }
+
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log(collision.name + " hit for " + Damage + " damage");
+
+            collision.GetComponent<PlayerController>().TakeDamage(Damage);
             Destroy(gameObject);
         }
     }

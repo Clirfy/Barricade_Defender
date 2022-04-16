@@ -23,7 +23,7 @@ public class EnemyRanged : Enemy
         shootPosVector = new Vector2(ShootPosition.transform.position.x, ShootPosition.transform.position.y);
 
         var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
-        bullet.GetComponent<EnemyBulletController>().TargetTag = "CampfireBase";
+        //bullet.GetComponent<EnemyBulletController>().TargetTag = "CampfireBase";
         bullet.GetComponent<EnemyBulletController>().Damage = Damage;
     }
 }
