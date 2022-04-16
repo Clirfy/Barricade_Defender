@@ -1,9 +1,15 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerController : PlayerStats
 {
+    [HideInInspector]
+    public UnityEvent OnDeath;
+
+    public Slider HpSlider;
     public GameObject MeleeAttackPrefab;
     public GameObject MeleeAttackLeftPos;
     public GameObject MeleeAttackRightPos;
@@ -27,10 +33,13 @@ public class PlayerController : PlayerStats
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         HpCurrent = HpMax;
+        HpSlider.maxValue = HpMax;
     }
 
     void Update()
     {
+        Death();
+        UpdateHpSlider();
         MeleeAttack();
         MeleeSpell();
         //Shoot();
@@ -42,6 +51,19 @@ public class PlayerController : PlayerStats
         }
         
         Movement();
+    }
+
+    private void UpdateHpSlider()
+    {
+        HpSlider.value = HpCurrent;
+    }
+
+    private void Death()
+    {
+        if (HpCurrent <= 0)
+        {
+            OnDeath.Invoke();
+        }
     }
 
     private void Movement()

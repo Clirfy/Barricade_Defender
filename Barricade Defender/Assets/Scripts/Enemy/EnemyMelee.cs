@@ -13,9 +13,10 @@ public class EnemyMelee : Enemy
             {
                 FindObjectOfType<BaseCampfire>().TakeDamage(Damage);
             }
+
             if (target.CompareTag("Player"))
             {
-                //hit player;
+                FindObjectOfType<PlayerController>().TakeDamage(Damage);
             }
         }
     }

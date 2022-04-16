@@ -15,6 +15,7 @@ public class PauseGame : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         player = FindObjectOfType<PlayerController>();
 
+        SetResume();
         gameManager.OnGamePaused.AddListener(SwitchPause);
     }
 
@@ -36,5 +37,12 @@ public class PauseGame : MonoBehaviour
                 player.enabled = true;
                 break;
         }
+    }
+
+    private void SetResume()
+    {
+        PauseGameWindow.SetActive(false);
+        Time.timeScale = 1f;
+        player.enabled = true;
     }
 }

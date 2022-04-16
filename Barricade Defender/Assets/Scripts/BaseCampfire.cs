@@ -4,9 +4,12 @@ using UnityEngine.Events;
 public class BaseCampfire : MonoBehaviour
 {
     [HideInInspector]
+    public UnityEvent OnDeath;
+    [HideInInspector]
     public UnityEvent OnHpChanged;
     [HideInInspector]
     public UnityEvent OnMoneyChanged;
+
     public int HpMax;
     public int Money;
 
@@ -40,6 +43,11 @@ public class BaseCampfire : MonoBehaviour
     {
         HpCurrent -= damage;
         OnHpChanged.Invoke();
+
+        if (HpCurrent <= 0)
+        {
+            Death();
+        }
     }
 
     public void RestoreHealth(int ammount)
@@ -52,6 +60,11 @@ public class BaseCampfire : MonoBehaviour
         }
 
         OnHpChanged.Invoke();
+    }
+
+    private void Death()
+    {
+        OnDeath.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
