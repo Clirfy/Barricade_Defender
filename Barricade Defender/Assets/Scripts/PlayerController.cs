@@ -124,7 +124,7 @@ public class PlayerController : PlayerStats
 
     private void MeleeAttack()
     {
-        if (Input.GetMouseButtonDown(1) && canAttack)
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             canMove = false;
             canAttack = false;
@@ -165,7 +165,7 @@ public class PlayerController : PlayerStats
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
 
-        if (Input.GetMouseButtonDown(2) && canAttack)
+        if (Input.GetMouseButtonDown(1) && canAttack)
         {
             canMove = false;
             canAttack = false;
