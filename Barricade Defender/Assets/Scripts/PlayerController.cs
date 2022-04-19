@@ -9,6 +9,7 @@ public class PlayerController : PlayerStats
     [HideInInspector]
     public UnityEvent OnDeath;
 
+    public Slider SpSlider;
     public Slider HpSlider;
     public GameObject MeleeAttackPrefab;
     public GameObject MeleeAttackLeftPos;
@@ -34,14 +35,17 @@ public class PlayerController : PlayerStats
         rb = GetComponent<Rigidbody2D>();
         HpCurrent = HpMax;
         HpSlider.maxValue = HpMax;
+        SpSlider.maxValue = spMax;
     }
 
     void Update()
     {
         Death();
-        UpdateHpSlider();
+        UpdateSliders();
         MeleeAttack();
         MeleeSpell();
+        SpellShield();
+        DisplayShieldSlider();
         //Shoot();
 
         if (canMove == false)
@@ -53,9 +57,10 @@ public class PlayerController : PlayerStats
         Movement();
     }
 
-    private void UpdateHpSlider()
+    private void UpdateSliders()
     {
         HpSlider.value = HpCurrent;
+        SpSlider.value = spCurrent;
     }
 
     private void Death()
@@ -173,6 +178,32 @@ public class PlayerController : PlayerStats
             bullet.GetComponent<BulletController>().TargetTag = "Enemy";
             bullet.GetComponent<BulletController>().Damage = Damage;
             bullet.transform.right = direction;
+        }
+    }
+
+    private void SpellShield()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            canMove = false;
+            canAttack = false;
+            animator.SetBool("isAttacking", true);
+            animator.SetBool("isCastingShield", true);
+            StartCoroutine(CoDoAttack(MeleeAttackTime, "isCastingShield"));
+
+            spCurrent = spMax;
+        }
+    }
+
+    private void DisplayShieldSlider()
+    {
+        if (spCurrent > 0)
+        {
+            SpSlider.gameObject.SetActive(true);
+        }
+        else
+        {
+            SpSlider.gameObject.SetActive(false);
         }
     }
 }
