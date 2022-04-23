@@ -1098,8 +1098,8 @@ MonoBehaviour:
   Layer:
     serializedVersion: 2
     m_Bits: 64
-  AttackRangeOffsetX: 5
-  AttackRange: {x: 10, y: 15}
+  AttackRangeOffsetX: 10
+  AttackRange: {x: 20, y: 25}
   TargetCollider: []
 --- !u!114 &6286443480641714828
 MonoBehaviour:

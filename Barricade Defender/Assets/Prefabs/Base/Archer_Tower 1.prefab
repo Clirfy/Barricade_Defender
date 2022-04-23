@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8469418490817019322}
   - component: {fileID: 1552010603998905461}
+  - component: {fileID: 6161998835812001903}
   m_Layer: 0
   m_Name: Archer_Tower 1
   m_TagString: Untagged
@@ -166,6 +167,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &6161998835812001903
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101274712115108393}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.247366, y: 0.040101826}
+  - {x: 1.2327628, y: -2.3725252}
+  - {x: -0.23721403, y: -2.9393125}
+  - {x: -1.8484097, y: -2.352787}
+  - {x: -1.8660109, y: 0.008020401}
+  - {x: -1.8660109, y: 0.008020401}
+  - {x: -1.8660109, y: 0.008020401}
+  - {x: -1.8677877, y: 0.06927437}
+  - {x: -1.6651423, y: 0.2936046}
+  - {x: -1.484235, y: 0.099100575}
+  - {x: -1.4055694, y: -0.07974604}
+  - {x: -0.48025918, y: 0.42921272}
+  - {x: -0.47844505, y: 0.66027766}
+  - {x: -0.2844751, y: 0.8095728}
+  - {x: -0.061007857, y: 0.64295477}
+  - {x: -0.03870344, y: 0.37034053}
+  - {x: 0.75435305, y: -0.038466245}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.0213244, y: 0.30477405}
+  - {x: 1.2619357, y: 0.05614245}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &6611440331402103107
 GameObject:
   m_ObjectHideFlags: 0
