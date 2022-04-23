@@ -1075,7 +1075,7 @@ MonoBehaviour:
   ShootPosition: {fileID: 5425433061383422806}
   attackDelay: 1
   MisslesCount: 5
-  MisslesAttackRate: 0.1
+  MisslesAttackRate: 0.05
   SkillPrefab: {fileID: 549297221309398136, guid: 8eba2ff36666c8748acec8f652c9b17b, type: 3}
   SpellDmg: 0
   SpellDmgModifier: 0
