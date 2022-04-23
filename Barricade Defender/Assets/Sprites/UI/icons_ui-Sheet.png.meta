@@ -1,28 +1,13 @@
 fileFormatVersion: 2
-guid: 79a0d8f309620a442a024ea54d3a9f07
+guid: ad3ff21fca3e08b47a103a138896ab3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6258958894443001393
-    second: button_talents_empty_0
+      213: 1012188192039167277
+    second: icons_ui-Sheet_0
   - first:
-      213: -6759648791842022940
-    second: button_talents_empty_1
-  - first:
-      213: -837550889942729477
-    second: button_talents_empty_2
-  - first:
-      213: -8683532608695532732
-    second: button_talents_empty_3
-  - first:
-      213: 9057036606455479738
-    second: button_talents_empty_4
-  - first:
-      213: -87004134777994091
-    second: button_talents_empty_5
-  - first:
-      213: 5827405455268841567
-    second: button_talents_empty_6
+      213: 4966653024919014834
+    second: icons_ui-Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button_talents_empty_0
+      name: icons_ui-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 24
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc904f00c06b329a0800000000000000
-      internalID: -6258958894443001393
+      spriteID: d25e6504cc30c0e00800000000000000
+      internalID: 1012188192039167277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: button_talents_empty_1
+      name: icons_ui-Sheet_1
       rect:
         serializedVersion: 2
-        x: 30
+        x: 17
         y: 0
-        width: 30
-        height: 24
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,113 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e99bdbec37e032a0800000000000000
-      internalID: -6759648791842022940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_talents_empty_2
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 30
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfcb6a337eb6064f0800000000000000
-      internalID: -837550889942729477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_talents_empty_3
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 30
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4438e278915ed7780800000000000000
-      internalID: -8683532608695532732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_talents_empty_4
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 30
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abdfc7daece01bd70800000000000000
-      internalID: 9057036606455479738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_talents_empty_5
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 0
-        width: 30
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 594419c4336eacef0800000000000000
-      internalID: -87004134777994091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_talents_empty_6
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 30
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f58097bf26a1fd050800000000000000
-      internalID: 5827405455268841567
+      spriteID: 2bdcae89c981de440800000000000000
+      internalID: 4966653024919014834
       vertices: []
       indices: 
       edges: []
