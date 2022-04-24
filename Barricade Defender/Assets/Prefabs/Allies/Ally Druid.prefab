@@ -1073,7 +1073,7 @@ MonoBehaviour:
   Damage: 2
   ArrowPrefab: {fileID: 7096489511064477162, guid: f1f3b887d885a2f4f8d354cac14162ea, type: 3}
   ShootPosition: {fileID: 5425433061383422806}
-  attackDelay: 1
+  attackDelay: 2
   MisslesCount: 5
   MisslesAttackRate: 0.05
   SkillPrefab: {fileID: 549297221309398136, guid: 8eba2ff36666c8748acec8f652c9b17b, type: 3}
