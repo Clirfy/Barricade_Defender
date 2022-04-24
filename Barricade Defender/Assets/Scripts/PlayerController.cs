@@ -100,8 +100,8 @@ public class PlayerController : PlayerStats
         rb.velocity = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed);
 
         gameObject.transform.position = new Vector2(
-            Mathf.Clamp(transform.position.x, -19f, 19f),
-            Mathf.Clamp(transform.position.y, -8, 2));
+            Mathf.Clamp(transform.position.x, -13f, 19f),
+            Mathf.Clamp(transform.position.y, -6, 2));
     }
 
     private void Shoot()

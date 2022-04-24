@@ -63,8 +63,8 @@ public class AllyDruidUpgrades : MonoBehaviour
     private void UpdateTextInfo()
     {
         levelUpText.text = levelUpCost.ToString();
-        upgradeSkillText.text = upgradeSkillCost.ToString();
-        mainPanelText.text = "Damage: " + allyDruid.Damage + "\nSlow Power: " + (allyDruid.SlowPower * 100) + "%";
+        //upgradeSkillText.text = upgradeSkillCost.ToString();
+        //mainPanelText.text = "Damage: " + allyDruid.Damage + "\nSlow Power: " + (allyDruid.SlowPower * 100) + "%";
     }
 
     private void EnableTalentTier(int level)
