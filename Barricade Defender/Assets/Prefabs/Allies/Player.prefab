@@ -1097,6 +1097,9 @@ MonoBehaviour:
   ShootPosition: {fileID: 7409460668728311099}
   Damage: 5
   MeleeAttackTime: 0.1
+  SpellShieldCd: 6
+  SpellShieldImage: {fileID: 0}
+  SpellShieldCDTimer: {fileID: 0}
   moveSpeed: 5
 --- !u!95 &1707685906047327545
 Animator:

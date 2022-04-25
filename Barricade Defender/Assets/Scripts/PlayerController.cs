@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -18,6 +19,9 @@ public class PlayerController : PlayerStats
     public GameObject ShootPosition;
     public int Damage;
     public float MeleeAttackTime;
+    public float SpellShieldCd;
+    public Image SpellShieldImage;
+    public TextMeshProUGUI SpellShieldImageText;
 
     [SerializeField]
     private int moveSpeed;
@@ -28,7 +32,9 @@ public class PlayerController : PlayerStats
     private Vector2 shootPosVector;
     private bool canAttack = true;
     private bool canMove = true;
-    
+
+    private float spellShieldCooldownTimer;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -36,6 +42,7 @@ public class PlayerController : PlayerStats
         HpCurrent = HpMax;
         HpSlider.maxValue = HpMax;
         SpSlider.maxValue = spMax;
+        spellShieldCooldownTimer = SpellShieldCd;
     }
 
     void Update()
@@ -46,14 +53,13 @@ public class PlayerController : PlayerStats
         MeleeSpell();
         SpellShield();
         DisplayShieldSlider();
-        //Shoot();
 
         if (canMove == false)
         {
             rb.velocity = Vector2.zero;
             return;
         }
-        
+
         Movement();
     }
 
@@ -102,24 +108,6 @@ public class PlayerController : PlayerStats
         gameObject.transform.position = new Vector2(
             Mathf.Clamp(transform.position.x, -13f, 19f),
             Mathf.Clamp(transform.position.y, -6, 2));
-    }
-
-    private void Shoot()
-    {
-        Vector2 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            shootPosVector = new Vector2(ShootPosition.transform.position.x, ShootPosition.transform.position.y);
-            
-
-            var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
-            bullet.GetComponent<BulletController>().TargetTag = "Enemy";
-            bullet.GetComponent<BulletController>().Damage = Damage;
-            bullet.transform.right = direction;
-        }
     }
 
     private void MeleeAttack()
@@ -183,15 +171,29 @@ public class PlayerController : PlayerStats
 
     private void SpellShield()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            canMove = false;
-            canAttack = false;
-            animator.SetBool("isAttacking", true);
-            animator.SetBool("isCastingShield", true);
-            StartCoroutine(CoDoAttack(MeleeAttackTime, "isCastingShield"));
+        spellShieldCooldownTimer -= Time.deltaTime;
 
-            spCurrent = spMax;
+        if (spellShieldCooldownTimer <= 0f)
+        {
+            SpellShieldImageText.text = "MMB";
+            SpellShieldImage.color = new Color(255, 255, 255, 1);
+
+            if (Input.GetMouseButtonDown(2))
+            {
+                spellShieldCooldownTimer = SpellShieldCd;
+                canMove = false;
+                canAttack = false;
+                animator.SetBool("isAttacking", true);
+                animator.SetBool("isCastingShield", true);
+                StartCoroutine(CoDoAttack(MeleeAttackTime, "isCastingShield"));
+
+                spCurrent = spMax;
+            }
+        }
+        else
+        {
+            SpellShieldImageText.text = spellShieldCooldownTimer.ToString("0.0");
+            SpellShieldImage.color = new Color(255, 255, 255, 0.75f);
         }
     }
 
