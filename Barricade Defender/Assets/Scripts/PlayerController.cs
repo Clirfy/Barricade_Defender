@@ -22,6 +22,9 @@ public class PlayerController : PlayerStats
     public float SpellShieldCd;
     public Image SpellShieldImage;
     public TextMeshProUGUI SpellShieldImageText;
+    public float SpellMeleeCd;
+    public Image SpellMeleeImage;
+    public TextMeshProUGUI SpellMeleeImageText;
 
     [SerializeField]
     private int moveSpeed;
@@ -32,8 +35,8 @@ public class PlayerController : PlayerStats
     private Vector2 shootPosVector;
     private bool canAttack = true;
     private bool canMove = true;
-
     private float spellShieldCooldownTimer;
+    private float spellMeleeCooldownTimer;
 
     void Start()
     {
@@ -42,7 +45,6 @@ public class PlayerController : PlayerStats
         HpCurrent = HpMax;
         HpSlider.maxValue = HpMax;
         SpSlider.maxValue = spMax;
-        spellShieldCooldownTimer = SpellShieldCd;
     }
 
     void Update()
@@ -153,19 +155,34 @@ public class PlayerController : PlayerStats
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
 
-        if (Input.GetMouseButtonDown(1) && canAttack)
-        {
-            canMove = false;
-            canAttack = false;
-            animator.SetBool("isAttacking", true);
-            animator.SetBool("isAttackingSpell", true);
-            StartCoroutine(CoDoAttack(MeleeAttackTime, "isAttackingSpell"));
-            shootPosVector = new Vector2(ShootPosition.transform.position.x, ShootPosition.transform.position.y);
+        spellMeleeCooldownTimer -= Time.deltaTime;
 
-            var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
-            bullet.GetComponent<BulletController>().TargetTag = "Enemy";
-            bullet.GetComponent<BulletController>().Damage = Damage;
-            bullet.transform.right = direction;
+        if (spellMeleeCooldownTimer <= 0f)
+        {
+            SpellMeleeImageText.text = "RMB";
+            SpellMeleeImage.color = new Color(255, 255, 255, 1);
+
+            if (Input.GetMouseButtonDown(1) && canAttack)
+            {
+                canMove = false;
+                canAttack = false;
+                animator.SetBool("isAttacking", true);
+                animator.SetBool("isAttackingSpell", true);
+                StartCoroutine(CoDoAttack(MeleeAttackTime, "isAttackingSpell"));
+                shootPosVector = new Vector2(ShootPosition.transform.position.x, ShootPosition.transform.position.y);
+
+                var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
+                bullet.GetComponent<BulletController>().TargetTag = "Enemy";
+                bullet.GetComponent<BulletController>().Damage = Damage;
+                bullet.transform.right = direction;
+
+                spellMeleeCooldownTimer = SpellMeleeCd;
+            }
+        }
+        else
+        {
+            SpellMeleeImageText.text = spellMeleeCooldownTimer.ToString("0.0");
+            SpellMeleeImage.color = new Color(255, 255, 255, 0.75f);
         }
     }
 
@@ -178,9 +195,8 @@ public class PlayerController : PlayerStats
             SpellShieldImageText.text = "MMB";
             SpellShieldImage.color = new Color(255, 255, 255, 1);
 
-            if (Input.GetMouseButtonDown(2))
+            if (Input.GetMouseButtonDown(2) && canAttack)
             {
-                spellShieldCooldownTimer = SpellShieldCd;
                 canMove = false;
                 canAttack = false;
                 animator.SetBool("isAttacking", true);
@@ -188,6 +204,7 @@ public class PlayerController : PlayerStats
                 StartCoroutine(CoDoAttack(MeleeAttackTime, "isCastingShield"));
 
                 spCurrent = spMax;
+                spellShieldCooldownTimer = SpellShieldCd;
             }
         }
         else
