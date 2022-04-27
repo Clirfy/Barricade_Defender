@@ -48,6 +48,10 @@ MonoBehaviour:
   - {fileID: 1221133390624060867, guid: d5e80ede1bfe8744ca61315cd390d219, type: 3}
   - {fileID: 1221133390624060867, guid: d56ce46bd5d864649b2cd368cc1ec3dc, type: 3}
   IsWaveStarted: 0
-  TimeToNextEnemySpawn: 1
   EnemySpawnMaxAmmount: 5
+  WaveLevel: 0
   StartButton: {fileID: 0}
+  WaveLevelTMP: {fileID: 0}
+  EnemiesLeftTMP: {fileID: 0}
+  YposRange: {x: 2, y: -6}
+  XposSpawn: 20

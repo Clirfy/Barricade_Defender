@@ -4775,7 +4775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1263320380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6564,6 +6564,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1633414696}
     m_Modifications:
+    - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
+      propertyPath: Damage
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: SpellMeleeCd
       value: 3

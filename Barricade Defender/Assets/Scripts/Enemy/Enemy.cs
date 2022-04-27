@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         attackTimer = Time.time;
 
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        ScaleStatsWithWaveLevel(waveManager.WaveLevel);
     }
 
     protected virtual void Update()
@@ -108,4 +109,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void ScaleStatsWithWaveLevel(int waveLevel)
+    {
+        Hp = Hp + waveLevel;
+        Damage = Damage + waveLevel / 2;
+    }
 }

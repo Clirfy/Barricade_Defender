@@ -8,7 +8,7 @@ public class WaveManager : MonoBehaviour
     public bool IsWaveStarted;
     public int EnemySpawnMaxAmmount;
     [HideInInspector]
-    public int WaveLevel = 1;
+    public int WaveLevel = 0;
     public Button StartButton;
     public TextMeshProUGUI WaveLevelTMP;
     public TextMeshProUGUI EnemiesLeftTMP;
@@ -40,6 +40,7 @@ public class WaveManager : MonoBehaviour
         }
 
         CountRemainingEnemies();
+        WaveLevelTMP.text = "Wave " + WaveLevel;
     }
 
     public void StartWave()
@@ -49,7 +50,6 @@ public class WaveManager : MonoBehaviour
         StartButton.interactable = false;
         EnemiesLeftTMP.gameObject.SetActive(true);
 
-        WaveLevelTMP.text = "Wave " + WaveLevel;
         WaveLevel++;
         EnemySpawnMaxAmmount = 5 + WaveLevel + Random.Range(0, WaveLevel + 1);
         enemiesLeft = EnemySpawnMaxAmmount;
