@@ -1016,6 +1016,18 @@ PrefabInstance:
       propertyPath: MisslesAttackRate
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7081044580939134037, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081044580939134037, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313136865221662229, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
 --- !u!4 &226767055 stripped
@@ -6484,21 +6496,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4671130105477521185, guid: 8f33b329ca560044a8a0e152ed34dcef, type: 3}
-      propertyPath: XposSpawn
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4671130105477521185, guid: 8f33b329ca560044a8a0e152ed34dcef, type: 3}
       propertyPath: StartButton
       value: 
       objectReference: {fileID: 356019000}
-    - target: {fileID: 4671130105477521185, guid: 8f33b329ca560044a8a0e152ed34dcef, type: 3}
-      propertyPath: YposRange.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4671130105477521185, guid: 8f33b329ca560044a8a0e152ed34dcef, type: 3}
-      propertyPath: YposRange.y
-      value: -6
-      objectReference: {fileID: 0}
     - target: {fileID: 4671130105477521185, guid: 8f33b329ca560044a8a0e152ed34dcef, type: 3}
       propertyPath: WaveLevelTMP
       value: 
@@ -6566,7 +6566,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: Damage
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: SpellMeleeCd

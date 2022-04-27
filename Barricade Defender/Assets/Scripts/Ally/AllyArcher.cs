@@ -5,10 +5,19 @@ public class AllyArcher : Ally
     public float firstAttackDelay;
 
     private float firstAttackDelayTimer;
+    private PlayerController player;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        player = FindObjectOfType<PlayerController>();
+    }
 
     protected override void Update()
     {
         base.Update();
+        Damage = player.Damage / 2;
 
         if (Time.time >= attackTimer && isAttacking)
         {
