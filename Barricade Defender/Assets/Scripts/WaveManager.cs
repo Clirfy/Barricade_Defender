@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,10 +6,12 @@ public class WaveManager : MonoBehaviour
 {
     public GameObject[] EnemyPrefab;
     public bool IsWaveStarted;
-    public float TimeToNextEnemySpawn;
     public int EnemySpawnMaxAmmount;
-
+    [HideInInspector]
+    public int WaveLevel = 1;
     public Button StartButton;
+    public TextMeshProUGUI WaveLevelTMP;
+    public TextMeshProUGUI EnemiesLeftTMP;
 
     [SerializeField]
     private Vector2 YposRange;
@@ -16,6 +19,7 @@ public class WaveManager : MonoBehaviour
     private float XposSpawn;
     private float enemySpawnCounter;
     private int enemySpawnedAmmount;
+    private int enemiesLeft;
 
     private void Update()
     {
@@ -26,7 +30,7 @@ public class WaveManager : MonoBehaviour
             if (enemySpawnCounter <= 0f && enemySpawnedAmmount < EnemySpawnMaxAmmount)
             {
                 enemySpawnedAmmount++;
-                enemySpawnCounter = TimeToNextEnemySpawn;
+                enemySpawnCounter = Random.Range(0.1f, 1.2f);
                 SpawnEnemy();
             }
             else if (enemySpawnedAmmount >= EnemySpawnMaxAmmount)
@@ -34,13 +38,22 @@ public class WaveManager : MonoBehaviour
                 CheckIsWaveCleared();
             }
         }
+
+        CountRemainingEnemies();
     }
 
     public void StartWave()
     {
-        enemySpawnCounter = TimeToNextEnemySpawn;
+        enemySpawnCounter = 1f;
         enemySpawnedAmmount = 0;
         StartButton.interactable = false;
+        EnemiesLeftTMP.gameObject.SetActive(true);
+
+        WaveLevelTMP.text = "Wave " + WaveLevel;
+        WaveLevel++;
+        EnemySpawnMaxAmmount = 5 + WaveLevel + Random.Range(0, WaveLevel + 1);
+        enemiesLeft = EnemySpawnMaxAmmount;
+
         IsWaveStarted = true;
     }
 
@@ -58,6 +71,7 @@ public class WaveManager : MonoBehaviour
 
         if (enemies.Length <= 0)
         {
+            EnemiesLeftTMP.gameObject.SetActive(false);
             return StartButton.interactable = true;
         }
         else
@@ -65,5 +79,15 @@ public class WaveManager : MonoBehaviour
             Debug.LogWarning("wave not cleared; array of enemies on scene is not empty");
             return StartButton.interactable = false;
         }
+    }
+
+    private void CountRemainingEnemies()
+    {
+        EnemiesLeftTMP.text = "Enemies left " + enemiesLeft;
+    }
+
+    public int SubtractEnemiesLeft()
+    {
+        return enemiesLeft--;
     }
 }

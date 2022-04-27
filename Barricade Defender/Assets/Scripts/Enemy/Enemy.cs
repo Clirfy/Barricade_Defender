@@ -21,12 +21,14 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D rb;
     protected DrawAttackArea DrawAttackArea;
     protected bool isWaitingToAttack = true;
+    protected WaveManager waveManager;
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         DrawAttackArea = GetComponent<DrawAttackArea>();
+        waveManager = FindObjectOfType<WaveManager>();
 
         HpSlider.maxValue = Hp;
         attackTimer = Time.time;
@@ -36,15 +38,14 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        Movement();
-        UpdateHpSlider();
-
         if (Hp <= 0)
         {
             DeathTest();
             return;
         }
 
+        Movement();
+        UpdateHpSlider();
         Attack();
     }
 
@@ -77,6 +78,7 @@ public class Enemy : MonoBehaviour
         death.GetComponent<Animator>().SetBool("IsDying", true);
 
         FindObjectOfType<BaseCampfire>().GetMoney(MoneyReward);
+        waveManager.SubtractEnemiesLeft();
         Destroy(gameObject);
     }
 
