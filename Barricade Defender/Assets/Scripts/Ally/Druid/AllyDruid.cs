@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AllyDruid : Ally
 {
@@ -15,11 +16,22 @@ public class AllyDruid : Ally
     [Range(0f, 1f)]
     public float SlowPower;
     public TextMeshProUGUI StatsTMP;
+    public float spellCd;
+    public Slider CdSlider;
 
     private int misslesFired;
     private float misslesAttackRateCounter;
     [SerializeField]
     private float skillCastingTimer;
+    private float spellCdTimer;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        spellCdTimer = spellCd;
+        CdSlider.maxValue = spellCd;
+    }
 
     protected override void Update()
     {
@@ -27,8 +39,10 @@ public class AllyDruid : Ally
 
         UpdateStatsText();
         SpellDmg = Damage * SpellDmgModifier;
+        spellCdTimer += Time.deltaTime;
+        CdSlider.value = spellCdTimer;
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && spellCdTimer >= spellCd)
         {
             Skill();
             StartCoroutine(CoStopCastingAnim(skillCastingTimer));
@@ -72,6 +86,12 @@ public class AllyDruid : Ally
             .OrderBy(o => Vector2.Distance(o.transform.position, transform.position))
             .ToArray();
 
+        if (nearestTargets.Length == 0)
+        {
+            Debug.LogWarning("druid skill - no targets found to cast a spell");
+            return;
+        }
+
         targetDmgDivider = nearestTargets.Length;
 
         if (targetDmgDivider > SkillTargetCount)
@@ -94,6 +114,7 @@ public class AllyDruid : Ally
                 animator.SetBool("isCasting", true);
             }
         }
+        spellCdTimer = 0f;
     }
 
     private IEnumerator CoStopCastingAnim(float time)

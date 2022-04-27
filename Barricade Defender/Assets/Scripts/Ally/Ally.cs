@@ -17,7 +17,7 @@ public class Ally : MonoBehaviour
     protected bool isWaitingToAttack = true;
     protected ReturnTargetsInRange returnTargetsInRange;
 
-    protected void Start()
+    protected virtual void Start()
     {
         animator = GetComponent<Animator>();
         DrawAttackArea = GetComponent<DrawAttackArea>();
