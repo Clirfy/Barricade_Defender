@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ally : MonoBehaviour
 {
-    public int Level;
+    public int Level = 1;
     public int Damage;
     public GameObject ArrowPrefab;
     public GameObject ShootPosition;
@@ -25,6 +25,7 @@ public class Ally : MonoBehaviour
 
         attackTimer = Time.time;
         animator.SetBool("isAttacking", false);
+        Level = 1;
     }
 
     protected virtual void Update()

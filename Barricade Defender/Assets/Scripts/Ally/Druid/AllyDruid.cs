@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class AllyDruid : Ally
@@ -13,6 +14,7 @@ public class AllyDruid : Ally
     public int SkillTargetCount;
     [Range(0f, 1f)]
     public float SlowPower;
+    public TextMeshProUGUI StatsTMP;
 
     private int misslesFired;
     private float misslesAttackRateCounter;
@@ -23,6 +25,7 @@ public class AllyDruid : Ally
     {
         base.Update();
 
+        UpdateStatsText();
         SpellDmg = Damage * SpellDmgModifier;
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -97,5 +100,14 @@ public class AllyDruid : Ally
     {
         yield return new WaitForSeconds(time);
         animator.SetBool("isCasting", false);
+    }
+
+    private void UpdateStatsText()
+    {
+        StatsTMP.text = "Level: " + Level +
+            "\nDamage: " + Damage +
+            "\nSpell Damage: " + SpellDmg +
+            "\nSpell Slow Power: " + (SlowPower * 100) + "%" +
+            "\nSpell Targets Count: " + SkillTargetCount;
     }
 }

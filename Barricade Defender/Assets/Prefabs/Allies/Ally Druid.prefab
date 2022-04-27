@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1461835181}
   - component: {fileID: 1461835180}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Stats TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87410e029c2d645419e2692964d9d0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
+  Level: 1
   Damage: 2
   ArrowPrefab: {fileID: 7096489511064477162, guid: f1f3b887d885a2f4f8d354cac14162ea, type: 3}
   ShootPosition: {fileID: 5425433061383422806}
@@ -1323,6 +1323,7 @@ MonoBehaviour:
   SpellDmgModifier: 0
   SkillTargetCount: 2
   SlowPower: 0.8
+  StatsTMP: {fileID: 1461835180}
   skillCastingTimer: 1.5
 --- !u!114 &3726574144871671693
 MonoBehaviour:
