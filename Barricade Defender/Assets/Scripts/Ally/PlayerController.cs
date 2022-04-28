@@ -246,5 +246,25 @@ public class PlayerController : PlayerStats
     public void SetSpellMeleeEffect(int effectId)
     {
         spellMeleeEffectId = effectId;
+
+        switch (effectId)
+        {
+            case 0:
+                SpellMeleeCd = 2f;
+                break;
+
+            case 1:
+                SpellMeleeCd = 6f;
+                break;
+
+            default:
+                break;
+        }
+
+        if (SpellMeleeCd < spellMeleeCooldownTimer)
+        {
+            return;
+        }
+        spellMeleeCooldownTimer = SpellMeleeCd;
     }
 }
