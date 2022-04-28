@@ -37,6 +37,7 @@ public class PlayerController : PlayerStats
     private bool canMove = true;
     private float spellShieldCooldownTimer;
     private float spellMeleeCooldownTimer;
+    private int spellMeleeEffectId;
 
     void Start()
     {
@@ -171,7 +172,23 @@ public class PlayerController : PlayerStats
                 StartCoroutine(CoDoAttack(MeleeAttackTime, "isAttackingSpell"));
                 shootPosVector = new Vector2(ShootPosition.transform.position.x, ShootPosition.transform.position.y);
 
-                var bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
+                GameObject bullet = Instantiate(BulletPrefab, shootPosVector, Quaternion.identity);
+
+                switch (spellMeleeEffectId)
+                {
+                    case 0:
+                        bullet.GetComponent<BulletController>().effectId = 0;
+                        break;
+
+                    case 1:
+                        bullet.GetComponent<BulletController>().effectId = 1;
+                        break;
+
+                    default:
+                        Debug.LogWarning("incorrect melee spell id - effect not found");
+                        return;
+                }
+
                 bullet.GetComponent<BulletController>().TargetTag = "Enemy";
                 bullet.GetComponent<BulletController>().Damage = Damage;
                 bullet.transform.right = direction;
@@ -224,5 +241,10 @@ public class PlayerController : PlayerStats
         {
             SpSlider.gameObject.SetActive(false);
         }
+    }
+
+    public void SetSpellMeleeEffect(int effectId)
+    {
+        spellMeleeEffectId = effectId;
     }
 }

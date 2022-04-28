@@ -5,7 +5,7 @@ public class BulletController : MonoBehaviour
     public int BulletSpeed;
     public int Damage;
     public string TargetTag;
-
+    public int effectId;
 
     private void Start()
     {
@@ -24,7 +24,19 @@ public class BulletController : MonoBehaviour
             Debug.Log(collision.name + " hit for " + Damage + " damage");
 
             collision.GetComponent<Enemy>().TakeDamage(Damage);
-            Destroy(gameObject);
+
+            switch (effectId)
+            {
+                case 0:
+                    Destroy(gameObject);
+                    break;
+
+                case 1:
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }
