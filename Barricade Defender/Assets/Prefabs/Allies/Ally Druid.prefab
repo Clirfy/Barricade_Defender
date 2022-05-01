@@ -1197,10 +1197,10 @@ RectTransform:
   m_Father: {fileID: 5990752568003595706}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.051000003, y: 0.25}
+  m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.472, y: 0}
-  m_SizeDelta: {x: -1.229, y: 0}
+  m_AnchoredPosition: {x: -0.005996704, y: -0.029999971}
+  m_SizeDelta: {x: -1.1218821, y: -0.0013802052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3581904050570736242
 CanvasRenderer:
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   SkillTargetCount: 2
   SlowPower: 0.8
   StatsTMP: {fileID: 1461835180}
-  spellCd: 2
+  spellCd: 5
   CdSlider: {fileID: 7250799202909749609}
   skillCastingTimer: 1.5
 --- !u!114 &3726574144871671693
