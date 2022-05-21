@@ -1,9 +1,16 @@
+using TMPro;
 using UnityEngine;
 
 public class AllyArcher : Ally
 {
     public float firstAttackDelay;
+    public TextMeshProUGUI StatsTMP;
 
+    [SerializeField]
+    private int levelUpCost;
+    [SerializeField]
+    private TextMeshProUGUI levelUpText;
+    private BaseCampfire baseCampfire;
     private float firstAttackDelayTimer;
     private PlayerController player;
 
@@ -12,12 +19,15 @@ public class AllyArcher : Ally
         base.Start();
 
         player = FindObjectOfType<PlayerController>();
+        baseCampfire = FindObjectOfType<BaseCampfire>();
     }
 
     protected override void Update()
     {
         base.Update();
-        Damage = player.Damage / 2;
+        //Damage = player.Damage / 2;
+
+        UpdateStatsText();
 
         if (Time.time >= attackTimer && isAttacking)
         {
@@ -37,6 +47,28 @@ public class AllyArcher : Ally
         {
             animator.SetBool("isAttacking", false);
             firstAttackDelayTimer = firstAttackDelay;
+        }
+    }
+
+    private void UpdateStatsText()
+    {
+        StatsTMP.text = "Level: " + Level +
+            "\nDamage: " + Damage;
+    }
+
+    public void LevelUp()
+    {
+        if (levelUpCost <= baseCampfire.Money)
+        {
+            baseCampfire.TakeMoney(levelUpCost);
+            levelUpCost = Mathf.RoundToInt(levelUpCost * 1.5f);
+            Damage += 1;
+            Level += 1;
+            levelUpText.text = levelUpCost.ToString();
+        }
+        else
+        {
+            Debug.LogWarning("not enough gold to level up");
         }
     }
 }

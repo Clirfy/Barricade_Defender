@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,11 @@ public class BaseCampfire : MonoBehaviour
     public int Money;
 
     public int HpCurrent;
+
+    [SerializeField]
+    private int levelUpCost;
+    [SerializeField]
+    private TextMeshProUGUI levelUpText;
 
     private void Awake()
     {
@@ -73,5 +79,15 @@ public class BaseCampfire : MonoBehaviour
         {
             Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), collision.collider);
         }
+    }
+
+    public void LevelUp()
+    {
+        TakeMoney(levelUpCost);
+        levelUpCost = Mathf.RoundToInt(levelUpCost * 1.2f);
+        HpMax += 10;
+        HpCurrent += 10;
+        levelUpText.text = levelUpCost.ToString();
+        OnHpChanged.Invoke();
     }
 }

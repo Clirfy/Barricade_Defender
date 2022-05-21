@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4673952037669863368}
   - component: {fileID: 4673952037669863369}
-  - component: {fileID: 4673952037669863370}
   - component: {fileID: 4673952037669863375}
   - component: {fileID: 4673952037669863374}
+  - component: {fileID: 4673952037669863370}
   m_Layer: 8
   m_Name: Base Campfire
   m_TagString: CampfireBase
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4673952037669863371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,7 +41,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4673952037669863371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -85,27 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4673952037669863370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4673952037669863371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f960249bd28bf8e4db37b588a80f1b9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnHpChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnMoneyChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  HpMax: 100
-  Money: 20
-  HpCurrent: 0
 --- !u!61 &4673952037669863375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +132,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &4673952037669863370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4673952037669863371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f960249bd28bf8e4db37b588a80f1b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHpChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoneyChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  HpMax: 100
+  Money: 1000
+  HpCurrent: 99
+  levelUpCost: 20
+  levelUpText: {fileID: 0}
