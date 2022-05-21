@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
 
     public int TakeDamage(int damage)
     {
-        if (spCurrent > damage)
+        if (spCurrent >= damage)
         {
             return spCurrent -= damage;
         }
