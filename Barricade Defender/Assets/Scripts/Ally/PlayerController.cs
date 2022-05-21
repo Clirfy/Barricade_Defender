@@ -23,7 +23,7 @@ public class PlayerController : PlayerStats
     public Image SpellShieldImage;
     public TextMeshProUGUI SpellShieldImageText;
     public float SpellMeleeCd;
-    public Image SpellMeleeImage;
+    public Button SpellMeleeImage;
     public TextMeshProUGUI SpellMeleeImageText;
 
     [SerializeField]
@@ -161,7 +161,7 @@ public class PlayerController : PlayerStats
         if (spellMeleeCooldownTimer <= 0f)
         {
             SpellMeleeImageText.text = "RMB";
-            SpellMeleeImage.color = new Color(255, 255, 255, 1);
+            SpellMeleeImage.image.color = new Color(255, 255, 255, 1);
 
             if (Input.GetMouseButtonDown(1) && canAttack)
             {
@@ -199,7 +199,7 @@ public class PlayerController : PlayerStats
         else
         {
             SpellMeleeImageText.text = spellMeleeCooldownTimer.ToString("0.0");
-            SpellMeleeImage.color = new Color(255, 255, 255, 0.75f);
+            SpellMeleeImage.image.color = new Color(255, 255, 255, 0.75f);
         }
     }
 
