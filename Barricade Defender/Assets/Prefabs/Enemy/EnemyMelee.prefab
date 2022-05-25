@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7274d55692e2b4fad6ac197b7ba3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
-  Damage: 3
+  Hp: 25
+  Damage: 2
   MoveSpeed: 2
   HpSlider: {fileID: 797487680260873310}
   deathAnim: {fileID: 3313617306187085882, guid: e5abfbd8c55f293469ae2e8b07ef3cf0, type: 3}

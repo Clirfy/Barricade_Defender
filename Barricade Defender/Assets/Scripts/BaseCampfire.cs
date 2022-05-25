@@ -87,7 +87,7 @@ public class BaseCampfire : MonoBehaviour
         levelUpCost = Mathf.RoundToInt(levelUpCost * 1.2f);
         HpMax += 10;
         HpCurrent += 10;
-        levelUpText.text = levelUpCost.ToString();
+        levelUpText.text = "Cost: " + levelUpCost.ToString() + " gold";
         OnHpChanged.Invoke();
     }
 }

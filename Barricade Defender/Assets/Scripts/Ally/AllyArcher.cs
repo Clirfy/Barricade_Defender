@@ -20,6 +20,8 @@ public class AllyArcher : Ally
 
         player = FindObjectOfType<PlayerController>();
         baseCampfire = FindObjectOfType<BaseCampfire>();
+
+        levelUpText.text = "Cost: " + levelUpCost.ToString() + " gold";
     }
 
     protected override void Update()
@@ -64,7 +66,7 @@ public class AllyArcher : Ally
             levelUpCost = Mathf.RoundToInt(levelUpCost * 1.5f);
             Damage += 1;
             Level += 1;
-            levelUpText.text = levelUpCost.ToString();
+            levelUpText.text = "Cost: " + levelUpCost.ToString() + " gold";
         }
         else
         {

@@ -25,6 +25,7 @@ public class PlayerController : PlayerStats
     public float SpellMeleeCd;
     public Button SpellMeleeImage;
     public TextMeshProUGUI SpellMeleeImageText;
+    public TextMeshProUGUI PlayerStatsText;
 
     [SerializeField]
     private int moveSpeed;
@@ -56,6 +57,7 @@ public class PlayerController : PlayerStats
         MeleeSpell();
         SpellShield();
         DisplayShieldSlider();
+        UpdateStats();
 
         if (canMove == false)
         {
@@ -64,6 +66,11 @@ public class PlayerController : PlayerStats
         }
 
         Movement();
+    }
+
+    private void UpdateStats()
+    {
+        PlayerStatsText.text = "Attack: " + Damage + "\nHealth: " + HpCurrent + "/" + HpMax + "\nShield: " + spCurrent + "/" + spMax; 
     }
 
     private void UpdateSliders()
