@@ -124,11 +124,25 @@ public class PlayerController : PlayerStats
     {
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
+            Vector2 mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+            if (mousePosition.x >= gameObject.transform.position.x)
+            {
+                lastXPos = 1f;
+            }
+            else
+            {
+                lastXPos = -1f;
+            }
+            animator.SetFloat("xPos", lastXPos);
+
             canMove = false;
             canAttack = false;
             animator.SetBool("isAttacking", true);
             animator.SetBool("isAttackingMelee", true);
             StartCoroutine(CoDoAttack(MeleeAttackTime, "isAttackingMelee"));
+
 
             switch (lastXPos)
             {
