@@ -17,7 +17,8 @@ public class UIOnMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             Vector2 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            ToolTip.transform.position = new Vector2(mousePosition.x, Mathf.Clamp(mousePosition.y, -90f, 3f));
+            ToolTip.transform.position = new Vector2(
+                Mathf.Clamp(mousePosition.x, -13f, 18f), Mathf.Clamp(mousePosition.y, -10f, 3f));
         }
     }
 
