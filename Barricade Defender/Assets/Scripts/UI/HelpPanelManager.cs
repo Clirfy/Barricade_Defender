@@ -7,7 +7,6 @@ public class HelpPanelManager : MonoBehaviour
     public GameObject OpenPanelButton;
     public GameObject HelpPanel;
 
-
     public void OpenPanel()
     {
         HelpPanel.SetActive(true);
