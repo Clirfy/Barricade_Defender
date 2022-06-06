@@ -278,7 +278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &19777517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &38236489
 PrefabInstance:
@@ -543,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3075173622080857799, guid: 7828930a5202c35408cbf63084508709, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3075173622080857799, guid: 7828930a5202c35408cbf63084508709, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1404,6 +1404,10 @@ PrefabInstance:
     - target: {fileID: 3042152626385609034, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587257368063879767, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
+      propertyPath: spellCd
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7081044580939134037, guid: 52e167ec81cfce0469765361d930a6e9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5626,7 +5630,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1068512782
 GameObject:
@@ -5979,7 +5983,7 @@ Transform:
   - {fileID: 1557213315}
   - {fileID: 934056479}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114639660
 GameObject:
@@ -8364,7 +8368,7 @@ Transform:
   - {fileID: 846265272}
   - {fileID: 615939629}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657827106
 GameObject:
@@ -8537,7 +8541,7 @@ Transform:
   - {fileID: 198786479}
   - {fileID: 7436222}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1677079745
 GameObject:
@@ -10179,6 +10183,10 @@ PrefabInstance:
       value: -24.233
       objectReference: {fileID: 0}
     - target: {fileID: 4673952037669863370, guid: b560e50537f85284d9e19b4cabf85d12, type: 3}
+      propertyPath: Money
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673952037669863370, guid: b560e50537f85284d9e19b4cabf85d12, type: 3}
       propertyPath: levelUpText
       value: 
       objectReference: {fileID: 1774302189}
@@ -10335,7 +10343,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: Damage
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -7899238330901425602, guid: 85188d24454677d4f94630674805ceb3, type: 3}
       propertyPath: SpellMeleeCd

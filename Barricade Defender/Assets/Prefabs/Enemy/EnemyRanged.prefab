@@ -269,12 +269,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d2f469f2c0ef546a8eb75ceee44bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 20
-  Damage: 10
+  Hp: 16
+  Damage: 8
   MoveSpeed: 1
   HpSlider: {fileID: 797487680260873310}
   deathAnim: {fileID: 3313617306187085882, guid: 0359d53149151ea479b770edf5c0ce4a, type: 3}
-  MoneyReward: 8
+  MoneyReward: 7
   attackDelay: 1
   BulletPrefab: {fileID: 8586662549713262621, guid: d72a6a67441d3e84b95e33e5d77ce519, type: 3}
   ShootPosition: {fileID: 6084927637148388942}
