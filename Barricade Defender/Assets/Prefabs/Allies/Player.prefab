@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358a7997a93f8ba4dbf0017a3b6f9406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HpMax: 50
+  HpMax: 100
   HpCurrent: 0
   OnDeath:
     m_PersistentCalls:
@@ -1099,7 +1099,11 @@ MonoBehaviour:
   MeleeAttackTime: 0.1
   SpellShieldCd: 6
   SpellShieldImage: {fileID: 0}
-  SpellShieldCDTimer: {fileID: 0}
+  SpellShieldImageText: {fileID: 0}
+  SpellMeleeCd: 0
+  SpellMeleeImage: {fileID: 0}
+  SpellMeleeImageText: {fileID: 0}
+  PlayerStatsText: {fileID: 0}
   moveSpeed: 5
 --- !u!95 &1707685906047327545
 Animator:
